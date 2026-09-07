@@ -1,0 +1,1288 @@
+/**
+ * Luxellia Parfums - Preview Stylesheet
+ * Version: 1.0 (5 September 2026)
+ * Aesthetic: Classical Luxury, Calm, Spacious, Royal Navy & Silver
+ */
+
+:root {
+  /* Design Tokens */
+  --lx-navy: #17324d;
+  --lx-blue: #2f5f8a;
+  --lx-blue-deep: #10283e;
+  --lx-silver: #a8b1ba;
+  --lx-silver-soft: #d9dee3;
+  --lx-ivory: #f7f5f0;
+  --lx-white: #ffffff;
+  --lx-text: #20262d;
+  --lx-muted: #66717c;
+  --lx-border: #e4e7ea;
+  --lx-border-subtle: #f0f2f4;
+  --lx-success: #206a4a;
+  --lx-danger: #a33a3a;
+
+  /* Temporary Brand Blue Token (Pending client vector logo) */
+  --lx-temp-brand-blue: #17324d;
+
+  /* Typography */
+  --lx-font-sans:
+    "Tajawal", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  --lx-font-serif: "Amiri", "Cinzel", Georgia, serif;
+
+  /* Spacing Scale */
+  --lx-space-xs: 4px;
+  --lx-space-sm: 8px;
+  --lx-space-md: 16px;
+  --lx-space-lg: 24px;
+  --lx-space-xl: 32px;
+  --lx-space-2xl: 48px;
+  --lx-space-3xl: 64px;
+
+  /* Radii */
+  --lx-radius-sm: 4px;
+  --lx-radius-md: 8px;
+  --lx-radius-pill: 999px;
+
+  /* Shadows */
+  --lx-shadow-subtle: 0 2px 8px rgba(23, 50, 77, 0.04);
+  --lx-shadow-card: 0 4px 16px rgba(23, 50, 77, 0.06);
+
+  /* Transitions */
+  --lx-transition-fast: 150ms ease;
+  --lx-transition-base: 220ms ease;
+}
+
+/* Base Reset & Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.luxellia-body {
+  font-family: var(--lx-font-sans);
+  background-color: var(--lx-white);
+  color: var(--lx-text);
+  line-height: 1.6;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--lx-blue);
+  outline-offset: 3px;
+}
+
+/* Images & Media */
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--lx-transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Layout Container */
+.luxellia-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: var(--lx-space-md);
+}
+
+/* Section Shared Utilities */
+.luxellia-section {
+  padding-block: var(--lx-space-2xl);
+}
+
+.luxellia-bg-alt {
+  background-color: var(--lx-ivory);
+}
+
+.luxellia-section-header {
+  text-align: center;
+  margin-bottom: var(--lx-space-2xl);
+}
+
+.luxellia-section-subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--lx-silver);
+  text-transform: uppercase;
+  margin-bottom: var(--lx-space-xs);
+}
+
+.luxellia-section-title {
+  font-family: var(--lx-font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-sm);
+}
+
+.luxellia-section-desc {
+  font-size: 0.95rem;
+  color: var(--lx-muted);
+}
+
+.luxellia-divider {
+  width: 50px;
+  height: 2px;
+  background-color: var(--lx-silver);
+  margin: var(--lx-space-md) auto 0;
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   1. Mock Notice Banner
+   ========================================================================== */
+.luxellia-mock-banner {
+  background-color: #fef8ee;
+  border-bottom: 1px solid #f6d8a7;
+  color: #8c5b08;
+  font-size: 0.8rem;
+  padding-block: var(--lx-space-xs);
+}
+
+.luxellia-mock-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--lx-space-sm);
+  text-align: center;
+}
+
+.luxellia-mock-tag {
+  background-color: #8c5b08;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: var(--lx-radius-pill);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.luxellia-unpublished-tag {
+  background-color: #922c2c;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: var(--lx-radius-pill);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.luxellia-mock-note {
+  color: #ad7818;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   2. Top Announcement Bar
+   ========================================================================== */
+.luxellia-top-bar {
+  background-color: var(--lx-navy);
+  color: var(--lx-white);
+  font-size: 0.8rem;
+  padding-block: 6px;
+}
+
+.luxellia-top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--lx-space-sm);
+}
+
+.luxellia-top-bar-text {
+  font-weight: 400;
+  margin: 0;
+}
+
+.luxellia-top-bar-links {
+  display: flex;
+  gap: var(--lx-space-md);
+}
+
+.luxellia-link-subtle {
+  color: var(--lx-silver-soft);
+}
+
+.luxellia-link-subtle:hover {
+  color: var(--lx-white);
+}
+
+/* ==========================================================================
+   3. Header & Navigation
+   ========================================================================== */
+.luxellia-header {
+  background-color: var(--lx-white);
+  border-bottom: 1px solid var(--lx-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: box-shadow var(--lx-transition-base);
+}
+
+.luxellia-header.scrolled {
+  box-shadow: var(--lx-shadow-subtle);
+}
+
+.luxellia-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: var(--lx-space-md);
+}
+
+.luxellia-brand-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.luxellia-logo {
+  height: 38px;
+  width: auto;
+}
+
+/* Menu Toggle Button (Mobile) */
+.luxellia-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--lx-navy);
+}
+
+.luxellia-menu-icon,
+.luxellia-menu-icon::before,
+.luxellia-menu-icon::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  position: relative;
+  transition:
+    transform var(--lx-transition-fast),
+    background-color var(--lx-transition-fast);
+}
+
+.luxellia-menu-icon::before,
+.luxellia-menu-icon::after {
+  content: "";
+  position: absolute;
+}
+
+.luxellia-menu-icon::before {
+  top: -6px;
+}
+.luxellia-menu-icon::after {
+  bottom: -6px;
+}
+
+/* Navigation Desktop List */
+.luxellia-nav-list {
+  display: flex;
+  list-style: none;
+  gap: var(--lx-space-lg);
+  align-items: center;
+}
+
+.luxellia-nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--lx-navy);
+  padding-block: var(--lx-space-xs);
+  position: relative;
+}
+
+.luxellia-nav-link:hover,
+.luxellia-nav-link.active {
+  color: var(--lx-blue);
+}
+
+.luxellia-nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--lx-navy);
+}
+
+/* Header Action Icons */
+.luxellia-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--lx-space-sm);
+}
+
+.luxellia-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--lx-radius-sm);
+  color: var(--lx-navy);
+  position: relative;
+  transition:
+    background-color var(--lx-transition-fast),
+    color var(--lx-transition-fast);
+}
+
+.luxellia-action-btn:hover {
+  background-color: var(--lx-ivory);
+  color: var(--lx-blue);
+}
+
+.luxellia-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.luxellia-cart-badge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: var(--lx-navy);
+  color: var(--lx-white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--lx-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   4. Hero Section
+   ========================================================================== */
+.luxellia-hero {
+  background: linear-gradient(
+    135deg,
+    var(--lx-ivory) 0%,
+    #ffffff 50%,
+    #f4f6f8 100%
+  );
+  padding-block: var(--lx-space-3xl);
+  border-bottom: 1px solid var(--lx-border-subtle);
+}
+
+.luxellia-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--lx-space-2xl);
+  align-items: center;
+}
+
+.luxellia-hero-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--lx-blue);
+  background-color: rgba(47, 95, 138, 0.08);
+  padding: 4px 12px;
+  border-radius: var(--lx-radius-pill);
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-hero-title {
+  font-family: var(--lx-font-serif);
+  font-size: 2.25rem;
+  line-height: 1.25;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-md);
+  font-weight: 700;
+}
+
+.luxellia-hero-desc {
+  font-size: 1.05rem;
+  color: var(--lx-muted);
+  margin-bottom: var(--lx-space-xl);
+  max-width: 540px;
+}
+
+.luxellia-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--lx-space-md);
+}
+
+.luxellia-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.luxellia-hero-img {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  border-radius: var(--lx-radius-md);
+  box-shadow: var(--lx-shadow-card);
+  border: 1px solid var(--lx-border);
+}
+
+/* Buttons */
+.luxellia-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--lx-radius-sm);
+  min-height: 48px;
+  min-width: 140px;
+  transition: all var(--lx-transition-base);
+}
+
+.luxellia-btn-primary {
+  background-color: var(--lx-navy);
+  color: var(--lx-white);
+  border: 1px solid var(--lx-navy);
+}
+
+.luxellia-btn-primary:hover {
+  background-color: var(--lx-blue-deep);
+  border-color: var(--lx-blue-deep);
+  transform: translateY(-1px);
+}
+
+.luxellia-btn-secondary {
+  background-color: transparent;
+  color: var(--lx-navy);
+  border: 1px solid var(--lx-silver);
+}
+
+.luxellia-btn-secondary:hover {
+  background-color: var(--lx-ivory);
+  border-color: var(--lx-navy);
+}
+
+/* ==========================================================================
+   4b. Luxury Animated Brands Strip (luxellia-brands-strip)
+   ========================================================================== */
+.luxellia-brands-strip-section {
+  background: linear-gradient(
+    180deg,
+    var(--lx-white) 0%,
+    var(--lx-ivory) 50%,
+    var(--lx-white) 100%
+  );
+  padding-block: var(--lx-space-2xl);
+  border-bottom: 1px solid var(--lx-border-subtle);
+  overflow: hidden;
+}
+
+.luxellia-brands-strip {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-block: var(--lx-space-md);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+.luxellia-brands-strip:focus-visible {
+  outline: 2px solid var(--lx-blue);
+  outline-offset: -2px;
+}
+
+.luxellia-brands-track {
+  display: flex;
+  width: max-content;
+  gap: var(--lx-space-lg);
+  animation: luxelliaBrandsMarqueeRTL 34s linear infinite;
+  will-change: transform;
+}
+
+/* Pause animation on hover, keyboard focus within, and mobile touch */
+.luxellia-brands-strip:hover .luxellia-brands-track,
+.luxellia-brands-strip:focus-within .luxellia-brands-track,
+.luxellia-brands-strip.is-paused .luxellia-brands-track {
+  animation-play-state: paused;
+}
+
+.luxellia-brands-group {
+  display: flex;
+  align-items: center;
+  gap: var(--lx-space-lg);
+  flex-shrink: 0;
+}
+
+/* Individual Brand Card with 3D Perspective */
+.luxellia-brand-card {
+  perspective: 900px;
+  flex: 0 0 170px;
+  width: 170px;
+}
+
+.luxellia-brand-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 14px 14px;
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-md);
+  box-shadow: var(--lx-shadow-subtle);
+  text-decoration: none;
+  color: inherit;
+  transform-style: preserve-3d;
+  transition:
+    transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease,
+    background-color 300ms ease;
+}
+
+/* Subtle luxury 3D tilt, elevation and refined silver border */
+.luxellia-brand-link:hover,
+.luxellia-brand-card:focus-within .luxellia-brand-link {
+  transform: translateY(-6px) scale(1.04) rotateX(4deg);
+  border-color: var(--lx-silver);
+  box-shadow:
+    0 12px 28px rgba(23, 50, 77, 0.1),
+    0 2px 8px rgba(168, 177, 186, 0.22);
+  background-color: #ffffff;
+}
+
+.luxellia-brand-link:focus-visible {
+  outline: 2px solid var(--lx-blue);
+  outline-offset: 3px;
+}
+
+.luxellia-brand-logo-wrap {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--lx-space-xs);
+  width: 100%;
+}
+
+.luxellia-brand-logo {
+  max-height: 48px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform var(--lx-transition-fast);
+}
+
+.luxellia-brand-link:hover .luxellia-brand-logo {
+  transform: scale(1.04);
+}
+
+.luxellia-brand-name {
+  font-family: var(--lx-font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+  margin-bottom: 2px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.luxellia-brand-sub {
+  font-size: 0.72rem;
+  letter-spacing: 0.8px;
+  color: var(--lx-silver);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Seamless infinite circular translation for RTL */
+@keyframes luxelliaBrandsMarqueeRTL {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(50% + (var(--lx-space-lg) / 2)));
+  }
+}
+
+/* ==========================================================================
+   5. Categories Grid
+   ========================================================================== */
+.luxellia-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--lx-space-md);
+}
+
+.luxellia-cat-card {
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-md);
+  overflow: hidden;
+  transition:
+    transform var(--lx-transition-base),
+    box-shadow var(--lx-transition-base);
+}
+
+.luxellia-cat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--lx-shadow-card);
+  border-color: var(--lx-silver);
+}
+
+.luxellia-cat-media {
+  aspect-ratio: 4 / 5;
+  background-color: var(--lx-ivory);
+  overflow: hidden;
+}
+
+.luxellia-cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.luxellia-cat-card:hover .luxellia-cat-img {
+  transform: scale(1.02);
+}
+
+.luxellia-cat-content {
+  padding: var(--lx-space-md);
+  text-align: center;
+}
+
+.luxellia-cat-name {
+  font-family: var(--lx-font-serif);
+  font-size: 1.15rem;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-xs);
+}
+
+.luxellia-cat-caption {
+  font-size: 0.8rem;
+  color: var(--lx-muted);
+  margin-bottom: var(--lx-space-sm);
+  display: none;
+}
+
+.luxellia-cat-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--lx-blue);
+}
+
+/* ==========================================================================
+   6. Products Grid
+   ========================================================================== */
+.luxellia-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--lx-space-md);
+}
+
+.luxellia-product-card {
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-md);
+  padding: var(--lx-space-md);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition:
+    box-shadow var(--lx-transition-base),
+    transform var(--lx-transition-base);
+}
+
+.luxellia-product-card:hover {
+  box-shadow: var(--lx-shadow-card);
+  transform: translateY(-2px);
+  border-color: var(--lx-silver-soft);
+}
+
+.luxellia-product-badges {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+
+.luxellia-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--lx-radius-pill);
+}
+
+.luxellia-badge-mock {
+  background-color: var(--lx-ivory);
+  color: var(--lx-muted);
+  border: 1px solid var(--lx-silver-soft);
+}
+
+.luxellia-badge-featured {
+  background-color: var(--lx-navy);
+  color: var(--lx-white);
+}
+
+.luxellia-badge-new {
+  background-color: var(--lx-blue);
+  color: var(--lx-white);
+}
+
+.luxellia-product-media {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--lx-space-md);
+  background-color: #fafbfc;
+  border-radius: var(--lx-radius-sm);
+}
+
+.luxellia-product-img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.luxellia-product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.luxellia-product-brand {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--lx-silver);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.luxellia-product-name {
+  font-family: var(--lx-font-serif);
+  font-size: 1.05rem;
+  color: var(--lx-navy);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.luxellia-product-spec {
+  font-size: 0.8rem;
+  color: var(--lx-muted);
+  margin-bottom: var(--lx-space-sm);
+}
+
+.luxellia-product-price-row {
+  margin-top: auto;
+  margin-bottom: var(--lx-space-md);
+  display: flex;
+  align-items: baseline;
+  gap: var(--lx-space-xs);
+}
+
+.luxellia-product-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+}
+
+.luxellia-tax-note {
+  font-size: 0.7rem;
+  color: var(--lx-muted);
+}
+
+.luxellia-btn-add {
+  width: 100%;
+  background-color: var(--lx-navy);
+  color: var(--lx-white);
+  padding-block: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--lx-radius-sm);
+  transition: background-color var(--lx-transition-fast);
+}
+
+.luxellia-btn-add:hover {
+  background-color: var(--lx-blue);
+}
+
+/* ==========================================================================
+   7. Brands Section
+   ========================================================================== */
+.luxellia-brands-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--lx-space-md);
+}
+
+.luxellia-brand-pill {
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  padding: 12px 24px;
+  border-radius: var(--lx-radius-sm);
+  font-family: var(--lx-font-serif);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: var(--lx-navy);
+  transition: border-color var(--lx-transition-fast);
+}
+
+.luxellia-brand-pill:hover {
+  border-color: var(--lx-navy);
+}
+
+.luxellia-brands-footnote {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--lx-muted);
+  margin-top: var(--lx-space-lg);
+}
+
+/* ==========================================================================
+   8. Authenticity & Quality
+   ========================================================================== */
+.luxellia-auth-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--lx-space-lg);
+}
+
+.luxellia-auth-card {
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-md);
+  padding: var(--lx-space-xl);
+  text-align: center;
+}
+
+.luxellia-auth-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--lx-space-md);
+  color: var(--lx-navy);
+}
+
+.luxellia-auth-heading {
+  font-family: var(--lx-font-serif);
+  font-size: 1.2rem;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-sm);
+}
+
+.luxellia-auth-text {
+  font-size: 0.9rem;
+  color: var(--lx-muted);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   9. Features Grid
+   ========================================================================== */
+.luxellia-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--lx-space-lg);
+  border-block: 1px solid var(--lx-border);
+  padding-block: var(--lx-space-xl);
+}
+
+.luxellia-feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--lx-space-md);
+  flex-direction: column;
+}
+
+.luxellia-feature-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  color: var(--lx-blue);
+  margin-top: 2px;
+}
+
+.luxellia-feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+  margin-bottom: 2px;
+}
+
+.luxellia-feature-desc {
+  font-size: 0.75rem;
+  color: var(--lx-muted);
+  text-align: center;
+}
+
+/* ==========================================================================
+   10. Welcome Box
+   ========================================================================== */
+.luxellia-welcome-box {
+  background-color: var(--lx-ivory);
+  border: 1px solid var(--lx-silver-soft);
+  border-radius: var(--lx-radius-md);
+  padding: var(--lx-space-2xl) var(--lx-space-lg);
+  text-align: center;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.luxellia-welcome-accent {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  color: var(--lx-silver);
+  font-weight: 700;
+  display: block;
+  margin-bottom: var(--lx-space-xs);
+}
+
+.luxellia-welcome-title {
+  font-family: var(--lx-font-serif);
+  font-size: 1.75rem;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-welcome-lead {
+  font-family: var(--lx-font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--lx-blue);
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-welcome-body {
+  font-size: 0.95rem;
+  color: var(--lx-text);
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto var(--lx-space-lg);
+}
+
+.luxellia-welcome-sig {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--lx-navy);
+}
+
+/* ==========================================================================
+   11. Footer
+   ========================================================================== */
+.luxellia-footer {
+  background-color: #0d1e2e;
+  color: #c9d2db;
+  padding-top: var(--lx-space-3xl);
+  border-top: 1px solid #1c3650;
+  font-size: 0.85rem;
+}
+
+.luxellia-footer-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--lx-space-2xl);
+  padding-bottom: var(--lx-space-2xl);
+}
+
+.luxellia-footer-logo {
+  filter: brightness(0) invert(1);
+  height: 32px;
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-footer-bio {
+  line-height: 1.7;
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-footer-tax {
+  font-size: 0.75rem;
+  color: var(--lx-silver);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.luxellia-footer-heading {
+  font-family: var(--lx-font-serif);
+  font-size: 1.05rem;
+  color: var(--lx-white);
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lx-space-sm);
+}
+
+.luxellia-footer-links a {
+  color: #a2afbd;
+}
+
+.luxellia-footer-links a:hover {
+  color: var(--lx-white);
+}
+
+.luxellia-footer-contact-item {
+  margin-bottom: var(--lx-space-xs);
+  color: #a2afbd;
+}
+
+.luxellia-social-links {
+  display: flex;
+  gap: var(--lx-space-sm);
+  margin-top: var(--lx-space-md);
+}
+
+.luxellia-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--lx-radius-sm);
+  background-color: #17324d;
+  color: var(--lx-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: background-color var(--lx-transition-fast);
+}
+
+.luxellia-social-icon:hover {
+  background-color: var(--lx-blue);
+}
+
+.luxellia-footer-bottom {
+  border-top: 1px solid #1c3650;
+  padding-block: var(--lx-space-md);
+  font-size: 0.75rem;
+}
+
+.luxellia-footer-bottom-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--lx-space-sm);
+  text-align: center;
+}
+
+.luxellia-payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.luxellia-pay-badge {
+  background-color: #17324d;
+  color: var(--lx-silver-soft);
+  padding: 3px 8px;
+  border-radius: var(--lx-radius-sm);
+  font-size: 0.7rem;
+}
+
+/* Toast Notification */
+.luxellia-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--lx-navy);
+  color: var(--lx-white);
+  padding: 12px 20px;
+  border-radius: var(--lx-radius-md);
+  font-size: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+.luxellia-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   12. Responsive Breakpoints
+   ========================================================================== */
+
+/* Mobile Menu State (Small screens) */
+@media (max-width: 900px) {
+  .luxellia-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 100%;
+    background-color: var(--lx-white);
+    border-bottom: 1px solid var(--lx-border);
+    box-shadow: var(--lx-shadow-card);
+    padding: var(--lx-space-md);
+  }
+
+  .luxellia-nav.open {
+    display: block;
+  }
+
+  .luxellia-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--lx-space-md);
+  }
+
+  .luxellia-nav-link {
+    display: block;
+    width: 100%;
+    padding-block: var(--lx-space-xs);
+    font-size: 1rem;
+  }
+}
+
+/* Tablet: >= 768px */
+@media (min-width: 768px) {
+  .luxellia-hero-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .luxellia-hero-title {
+    font-size: 2.85rem;
+  }
+
+  .luxellia-categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .luxellia-cat-caption {
+    display: block;
+  }
+
+  .luxellia-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .luxellia-auth-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .luxellia-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .luxellia-footer-inner {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+
+  .luxellia-footer-bottom-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop: >= 1024px */
+@media (min-width: 1024px) {
+  .luxellia-menu-btn {
+    display: none;
+  }
+
+  .luxellia-nav {
+    display: block;
+  }
+
+  .luxellia-section {
+    padding-block: var(--lx-space-3xl);
+  }
+}
+
+/* Large Desktop: >= 1440px */
+@media (min-width: 1440px) {
+  .luxellia-container {
+    max-width: 1320px;
+  }
+
+  .luxellia-hero-title {
+    font-size: 3.2rem;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .luxellia-brands-track {
+    animation: none !important;
+  }
+
+  .luxellia-brands-strip {
+    overflow-x: auto;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+
+  .luxellia-brand-link:hover,
+  .luxellia-brand-card:focus-within .luxellia-brand-link {
+    transform: none !important;
+  }
+}
+

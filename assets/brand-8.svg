@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 70" width="100%" height="100%" fill="none">
+  <!-- Brand 8: Noble Demo (Venezia) -->
+  <g transform="translate(18, 12)">
+    <path d="M12 36 L12 18 C12 10 38 10 38 18 L38 36" stroke="#17324d" stroke-width="1.5" fill="#f7f5f0"/>
+    <line x1="25" y1="14" x2="25" y2="36" stroke="#a8b1ba" stroke-width="1"/>
+  </g>
+  <text x="75" y="34" font-family="'Cinzel', 'Amiri', Georgia, serif" font-size="14" font-weight="700" letter-spacing="2" fill="#17324d">NOBLE</text>
+  <text x="75" y="49" font-family="'Cinzel', 'Amiri', Georgia, serif" font-size="12" font-weight="600" letter-spacing="1.5" fill="#2f5f8a">DEMO</text>
+</svg>

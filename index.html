@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="متجر Luxellia Parfums - واجهة تجريبية فاخرة لتخصيص ثيم رائد على منصة سلة">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Luxellia Parfums | فخامة العطور العالمية (معاينة تجريبية)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="luxellia-body">
+  <!-- Mock Notice Banner -->
+  <div class="luxellia-mock-banner" role="alert">
+    <div class="luxellia-container luxellia-mock-banner-inner">
+      <span class="luxellia-mock-tag">تنبيه المعاينة</span>
+      <span class="luxellia-unpublished-tag">نسخة تجريبية غير منشورة</span>
+      <span>بيانات تجريبية – غير مخصصة للنشر (Mock Preview Environment)</span>
+      <span class="luxellia-mock-note">المنتجات والصور وهمية بالكامل لأغراض التصميم</span>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="luxellia-top-bar">
+    <div class="luxellia-container luxellia-top-bar-inner">
+      <p class="luxellia-top-bar-text">شحن مجاني للطلبات فوق 350 ر.س في كافة مدن المملكة | مصادر معتمدة 100%</p>
+      <div class="luxellia-top-bar-links">
+        <a href="#about" class="luxellia-link-subtle">من نحن</a>
+        <a href="#support" class="luxellia-link-subtle">المساعدة</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="luxellia-header" id="main-header">
+    <div class="luxellia-container luxellia-header-inner">
+      <!-- Mobile Menu Toggle Button -->
+      <button class="luxellia-menu-btn" id="menuToggle" aria-label="فتح القائمة الرئيسية" aria-expanded="false" aria-controls="mainNav">
+        <span class="luxellia-menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <!-- Logo -->
+      <div class="luxellia-brand">
+        <a href="#" class="luxellia-brand-link" aria-label="Luxellia Parfums الرئيسية">
+          <img src="assets/logo.svg" alt="Luxellia Parfums" class="luxellia-logo" width="180" height="42">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="luxellia-nav" id="mainNav" aria-label="التنقل الرئيسي">
+        <ul class="luxellia-nav-list">
+          <li class="luxellia-nav-item"><a href="#" class="luxellia-nav-link active">الرئيسية</a></li>
+          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عطور رجالية</a></li>
+          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عطور نسائية</a></li>
+          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عطور نيش</a></li>
+          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عينات العطور</a></li>
+          <li class="luxellia-nav-item"><a href="#brands" class="luxellia-nav-link">الماركات</a></li>
+          <li class="luxellia-nav-item"><a href="#authenticity" class="luxellia-nav-link">الأصالة والجودة</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Utilities -->
+      <div class="luxellia-header-actions">
+        <!-- Search Trigger -->
+        <button class="luxellia-action-btn" id="searchBtn" aria-label="البحث عن عطر">
+          <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Account -->
+        <a href="#account" class="luxellia-action-btn" aria-label="تسجيل الدخول / الحساب">
+          <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+
+        <!-- Cart Badge -->
+        <button class="luxellia-action-btn luxellia-cart-btn" id="cartBtn" aria-label="سلة المشتريات: 0 منتجات">
+          <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="luxellia-cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="luxellia-hero" aria-label="الواجهة الرئيسية">
+      <div class="luxellia-container luxellia-hero-inner">
+        <div class="luxellia-hero-content">
+          <span class="luxellia-hero-tag">تشكيلة خريف 2026 الحصرية</span>
+          <h1 class="luxellia-hero-title">فخامة العطور العالمية بين يديك</h1>
+          <p class="luxellia-hero-desc">
+            مجموعة منتقاة بعناية من أرقى دور العطور العالمية والنيش، مقدمة في عبواتها الأصلية عبر سلاسل إمداد معتمدة لضمان أقصى درجات الثقة والنقاء.
+          </p>
+          <div class="luxellia-hero-actions">
+            <a href="#categories" class="luxellia-btn luxellia-btn-primary">اكتشفي المجموعة</a>
+            <a href="#authenticity" class="luxellia-btn luxellia-btn-secondary">معايير الجودة</a>
+          </div>
+        </div>
+        <div class="luxellia-hero-visual">
+          <img src="assets/hero-placeholder.svg" alt="تصور كلاسيكي فاخر لزجاجة عطر Luxellia" class="luxellia-hero-img" width="800" height="350">
+        </div>
+      </div>
+    </section>
+
+    <!-- Luxury Brands Strip Marquee Section -->
+    <section class="luxellia-section luxellia-brands-strip-section" id="brands" aria-labelledby="brandsTitle">
+      <div class="luxellia-container">
+        <div class="luxellia-section-header">
+          <span class="luxellia-section-subtitle">شركاء الفخامة</span>
+          <h2 class="luxellia-section-title" id="brandsTitle">أبرز دور العطور العالمية</h2>
+          <div class="luxellia-divider" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="luxellia-brands-strip" role="region" aria-label="شريط العلامات التجارية العالمي" tabindex="0">
+        <div class="luxellia-brands-track">
+          <!-- Primary Accessible Group -->
+          <div class="luxellia-brands-group">
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: ميزون موك (Maison Mock)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-1.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">ميزون موك</h3>
+                <span class="luxellia-brand-sub">Maison Mock</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: رويال تيست (Royal Test)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-2.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">رويال تيست</h3>
+                <span class="luxellia-brand-sub">Royal Test</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: نيش ديمو (Niche Demo)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-3.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">نيش ديمو</h3>
+                <span class="luxellia-brand-sub">Niche Demo</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: عطور برستيج (Parfums Prestige)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-4.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">عطور برستيج</h3>
+                <span class="luxellia-brand-sub">Parfums Prestige</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: أتيليه تيست (Atelier Test)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-5.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">أتيليه تيست</h3>
+                <span class="luxellia-brand-sub">Atelier Test</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: إيسنس ديمو (Essence Demo)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-6.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">إيسنس ديمو</h3>
+                <span class="luxellia-brand-sub">Essence Demo</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: أورا موك (Aura Mock)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-7.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">أورا موك</h3>
+                <span class="luxellia-brand-sub">Aura Mock</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" aria-label="علامة تجارية: نوبل ديمو (Noble Demo)">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-8.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">نوبل ديمو</h3>
+                <span class="luxellia-brand-sub">Noble Demo</span>
+              </a>
+            </article>
+          </div>
+
+          <!-- Secondary Cloned Group for Seamless Loop (aria-hidden="true" and tabindex="-1" to prevent duplicate assistive announcements or focus trap) -->
+          <div class="luxellia-brands-group" aria-hidden="true">
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-1.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">ميزون موك</h3>
+                <span class="luxellia-brand-sub">Maison Mock</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-2.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">رويال تيست</h3>
+                <span class="luxellia-brand-sub">Royal Test</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-3.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">نيش ديمو</h3>
+                <span class="luxellia-brand-sub">Niche Demo</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-4.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">عطور برستيج</h3>
+                <span class="luxellia-brand-sub">Parfums Prestige</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-5.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">أتيليه تيست</h3>
+                <span class="luxellia-brand-sub">Atelier Test</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-6.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">إيسنس ديمو</h3>
+                <span class="luxellia-brand-sub">Essence Demo</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-7.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">أورا موك</h3>
+                <span class="luxellia-brand-sub">Aura Mock</span>
+              </a>
+            </article>
+
+            <article class="luxellia-brand-card">
+              <a href="#brands" class="luxellia-brand-link" tabindex="-1">
+                <div class="luxellia-brand-logo-wrap">
+                  <img src="assets/brand-8.svg" alt="" class="luxellia-brand-logo" width="140" height="54" loading="lazy">
+                </div>
+                <h3 class="luxellia-brand-name">نوبل ديمو</h3>
+                <span class="luxellia-brand-sub">Noble Demo</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Four Primary Shopping Categories -->
+    <section class="luxellia-section" id="categories" aria-labelledby="categoriesTitle">
+      <div class="luxellia-container">
+        <div class="luxellia-section-header">
+          <span class="luxellia-section-subtitle">تصنيفات المتجر</span>
+          <h2 class="luxellia-section-title" id="categoriesTitle">تسوق بحسب الفئة</h2>
+          <div class="luxellia-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="luxellia-categories-grid">
+          <!-- Category 1 -->
+          <article class="luxellia-cat-card">
+            <a href="#catalog" class="luxellia-cat-link">
+              <div class="luxellia-cat-media">
+                <img src="assets/cat-men.svg" alt="عطور رجالية فاخرة" class="luxellia-cat-img" loading="lazy" width="300" height="375">
+              </div>
+              <div class="luxellia-cat-content">
+                <h3 class="luxellia-cat-name">عطور رجالية</h3>
+                <p class="luxellia-cat-caption">توليفات كلاسيكية خشبية وأروما منعشة</p>
+                <span class="luxellia-cat-cta">استكشف القسم &larr;</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Category 2 -->
+          <article class="luxellia-cat-card">
+            <a href="#catalog" class="luxellia-cat-link">
+              <div class="luxellia-cat-media">
+                <img src="assets/cat-women.svg" alt="عطور نسائية راقية" class="luxellia-cat-img" loading="lazy" width="300" height="375">
+              </div>
+              <div class="luxellia-cat-content">
+                <h3 class="luxellia-cat-name">عطور نسائية</h3>
+                <p class="luxellia-cat-caption">باقات زهرية آسرة وأنوثة ناعمة</p>
+                <span class="luxellia-cat-cta">استكشف القسم &larr;</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Category 3 -->
+          <article class="luxellia-cat-card">
+            <a href="#catalog" class="luxellia-cat-link">
+              <div class="luxellia-cat-media">
+                <img src="assets/cat-niche.svg" alt="عطور نيش حصرية" class="luxellia-cat-img" loading="lazy" width="300" height="375">
+              </div>
+              <div class="luxellia-cat-content">
+                <h3 class="luxellia-cat-name">عطور نيش</h3>
+                <p class="luxellia-cat-caption">إبداعات فنية جريئة ونادرة لمحبي التميز</p>
+                <span class="luxellia-cat-cta">استكشف القسم &larr;</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Category 4 -->
+          <article class="luxellia-cat-card">
+            <a href="#catalog" class="luxellia-cat-link">
+              <div class="luxellia-cat-media">
+                <img src="assets/cat-samples.svg" alt="عينات العطور ومجموعات الاكتشاف" class="luxellia-cat-img" loading="lazy" width="300" height="375">
+              </div>
+              <div class="luxellia-cat-content">
+                <h3 class="luxellia-cat-name">عينات العطور</h3>
+                <p class="luxellia-cat-caption">مجموعات اكتشاف مصغرة لتجربة العطر قبل الشراء</p>
+                <span class="luxellia-cat-cta">استكشف القسم &larr;</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Mock Products Grid -->
+    <section class="luxellia-section luxellia-bg-alt" id="catalog" aria-labelledby="featuredTitle">
+      <div class="luxellia-container">
+        <div class="luxellia-section-header">
+          <span class="luxellia-section-subtitle">المختارات</span>
+          <h2 class="luxellia-section-title" id="featuredTitle">مختارات Luxellia الحصرية</h2>
+          <p class="luxellia-section-desc">نماذج منتجات تجريبية تحاكي المظهر المتوقع في ثيم رائد</p>
+          <div class="luxellia-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="luxellia-products-grid">
+          <!-- Product Card 1 -->
+          <article class="luxellia-product-card" data-sku="MOCK-SOV-100">
+            <div class="luxellia-product-badges">
+              <span class="luxellia-badge luxellia-badge-mock">عينة تجريبية</span>
+              <span class="luxellia-badge luxellia-badge-featured">الأكثر طلباً</span>
+            </div>
+            <div class="luxellia-product-media">
+              <img src="assets/prod-1.svg" alt="عطر تجريبي Atelier Sovereign" class="luxellia-product-img" loading="lazy" width="280" height="280">
+            </div>
+            <div class="luxellia-product-info">
+              <span class="luxellia-product-brand">Maison Mock</span>
+              <h3 class="luxellia-product-name"><a href="#product-view">Atelier Sovereign</a></h3>
+              <p class="luxellia-product-spec">Eau de Parfum — 100 مل</p>
+              <div class="luxellia-product-price-row">
+                <span class="luxellia-product-price">450 ر.س</span>
+                <span class="luxellia-tax-note">شامل الضريبة</span>
+              </div>
+              <button class="luxellia-btn luxellia-btn-add" data-id="1" data-name="Atelier Sovereign">
+                إضافة للسلة
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="luxellia-product-card" data-sku="MOCK-VEL-75">
+            <div class="luxellia-product-badges">
+              <span class="luxellia-badge luxellia-badge-mock">عينة تجريبية</span>
+            </div>
+            <div class="luxellia-product-media">
+              <img src="assets/prod-2.svg" alt="عطر تجريبي Velvet Horizon" class="luxellia-product-img" loading="lazy" width="280" height="280">
+            </div>
+            <div class="luxellia-product-info">
+              <span class="luxellia-product-brand">Royal Test</span>
+              <h3 class="luxellia-product-name"><a href="#product-view">Velvet Horizon</a></h3>
+              <p class="luxellia-product-spec">Extrait de Parfum — 75 مل</p>
+              <div class="luxellia-product-price-row">
+                <span class="luxellia-product-price">680 ر.س</span>
+                <span class="luxellia-tax-note">شامل الضريبة</span>
+              </div>
+              <button class="luxellia-btn luxellia-btn-add" data-id="2" data-name="Velvet Horizon">
+                إضافة للسلة
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="luxellia-product-card" data-sku="MOCK-CEL-100">
+            <div class="luxellia-product-badges">
+              <span class="luxellia-badge luxellia-badge-mock">عينة تجريبية</span>
+              <span class="luxellia-badge luxellia-badge-new">جديد</span>
+            </div>
+            <div class="luxellia-product-media">
+              <img src="assets/prod-3.svg" alt="عطر تجريبي Celestial Iris" class="luxellia-product-img" loading="lazy" width="280" height="280">
+            </div>
+            <div class="luxellia-product-info">
+              <span class="luxellia-product-brand">Niche Demo</span>
+              <h3 class="luxellia-product-name"><a href="#product-view">Celestial Iris</a></h3>
+              <p class="luxellia-product-spec">Eau de Parfum — 100 مل</p>
+              <div class="luxellia-product-price-row">
+                <span class="luxellia-product-price">520 ر.س</span>
+                <span class="luxellia-tax-note">شامل الضريبة</span>
+              </div>
+              <button class="luxellia-btn luxellia-btn-add" data-id="3" data-name="Celestial Iris">
+                إضافة للسلة
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="luxellia-product-card" data-sku="MOCK-SIL-50">
+            <div class="luxellia-product-badges">
+              <span class="luxellia-badge luxellia-badge-mock">عينة تجريبية</span>
+            </div>
+            <div class="luxellia-product-media">
+              <img src="assets/prod-4.svg" alt="عطر تجريبي Silver Cedar" class="luxellia-product-img" loading="lazy" width="280" height="280">
+            </div>
+            <div class="luxellia-product-info">
+              <span class="luxellia-product-brand">Parfums Prestige</span>
+              <h3 class="luxellia-product-name"><a href="#product-view">Silver Cedar</a></h3>
+              <p class="luxellia-product-spec">Eau de Parfum — 50 مل</p>
+              <div class="luxellia-product-price-row">
+                <span class="luxellia-product-price">380 ر.س</span>
+                <span class="luxellia-tax-note">شامل الضريبة</span>
+              </div>
+              <button class="luxellia-btn luxellia-btn-add" data-id="4" data-name="Silver Cedar">
+                إضافة للسلة
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 5 -->
+          <article class="luxellia-product-card" data-sku="MOCK-TRIO-15">
+            <div class="luxellia-product-badges">
+              <span class="luxellia-badge luxellia-badge-mock">عينة تجريبية</span>
+            </div>
+            <div class="luxellia-product-media">
+              <img src="assets/prod-5.svg" alt="مجموعة عينات Discovery Vial Trio" class="luxellia-product-img" loading="lazy" width="280" height="280">
+            </div>
+            <div class="luxellia-product-info">
+              <span class="luxellia-product-brand">Atelier Test</span>
+              <h3 class="luxellia-product-name"><a href="#product-view">Discovery Vial Trio</a></h3>
+              <p class="luxellia-product-spec">مجموعة اكتشاف — 3×5 مل</p>
+              <div class="luxellia-product-price-row">
+                <span class="luxellia-product-price">120 ر.س</span>
+                <span class="luxellia-tax-note">شامل الضريبة</span>
+              </div>
+              <button class="luxellia-btn luxellia-btn-add" data-id="5" data-name="Discovery Vial Trio">
+                إضافة للسلة
+              </button>
+            </div>
+          </article>
+
+          <!-- Product Card 6 -->
+          <article class="luxellia-product-card" data-sku="MOCK-IMP-100">
+            <div class="luxellia-product-badges">
+              <span class="luxellia-badge luxellia-badge-mock">عينة تجريبية</span>
+            </div>
+            <div class="luxellia-product-media">
+              <img src="assets/prod-6.svg" alt="عطر تجريبي Imperial Vetiver" class="luxellia-product-img" loading="lazy" width="280" height="280">
+            </div>
+            <div class="luxellia-product-info">
+              <span class="luxellia-product-brand">Maison Mock</span>
+              <h3 class="luxellia-product-name"><a href="#product-view">Imperial Vetiver</a></h3>
+              <p class="luxellia-product-spec">Eau de Parfum — 100 مل</p>
+              <div class="luxellia-product-price-row">
+                <span class="luxellia-product-price">490 ر.س</span>
+                <span class="luxellia-tax-note">شامل الضريبة</span>
+              </div>
+              <button class="luxellia-btn luxellia-btn-add" data-id="6" data-name="Imperial Vetiver">
+                إضافة للسلة
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="luxellia-section" id="brands" aria-labelledby="brandsTitle">
+      <div class="luxellia-container">
+        <div class="luxellia-section-header">
+          <span class="luxellia-section-subtitle">الماركات</span>
+          <h2 class="luxellia-section-title" id="brandsTitle">علامات تجارية عالمية مختارة</h2>
+          <div class="luxellia-divider" aria-hidden="true"></div>
+        </div>
+
+        <div class="luxellia-brands-strip">
+          <div class="luxellia-brand-pill"><span>Maison Mock</span></div>
+          <div class="luxellia-brand-pill"><span>Atelier Alpha</span></div>
+          <div class="luxellia-brand-pill"><span>Parfums Prestige</span></div>
+          <div class="luxellia-brand-pill"><span>Royal Test</span></div>
+          <div class="luxellia-brand-pill"><span>Essence Demo</span></div>
+        </div>
+        <p class="luxellia-brands-footnote">* يتم استبدال أسماء العلامات بالقائمة الرسمية المعتمدة فور استلامها من العميلة.</p>
+      </div>
+    </section>
+
+    <!-- Authenticity & Quality Policy Section -->
+    <section class="luxellia-section luxellia-bg-alt" id="authenticity" aria-labelledby="authTitle">
+      <div class="luxellia-container">
+        <div class="luxellia-auth-grid">
+          <div class="luxellia-auth-card">
+            <div class="luxellia-auth-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="luxellia-auth-heading">معايير التحقق وسلاسل الإمداد</h3>
+            <p class="luxellia-auth-text">
+              نلتزم في Luxellia Parfums بالاستيراد الحصري عبر وكلاء وموزعين معتمدين. تخضع كل شحنة للتحقق الدقيق من الباركود والتشغيلة وتطابق بيانات بلد المنشأ قبل عرضها في المتجر.
+            </p>
+          </div>
+
+          <div class="luxellia-auth-card">
+            <div class="luxellia-auth-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="luxellia-auth-heading">عبوات أصلية وتخزين مهني</h3>
+            <p class="luxellia-auth-text">
+              تصل المنتجات في علب المصنع المغلقة بغلاف السيلوفان الأصلي، وتُحفظ في مستودعات مهيأة بدرجات حرارة ورطوبة مضبوطة للحفاظ على توازن وثبات النوتات العطرية الحساسة.
+            </p>
+          </div>
+
+          <div class="luxellia-auth-card">
+            <div class="luxellia-auth-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="luxellia-auth-heading">سياسة قبول حازمة للمنتجات</h3>
+            <p class="luxellia-auth-text">
+              لا ندرج العطور المستوحاة أو التركيبات أو الزيوت غير الموثقة؛ معيارنا الصارم هو قبول الماركات العالمية المعترف بها رسمياً وخضوعها لرقابة الجودة التامة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Experience / Value Props Section -->
+    <section class="luxellia-section" aria-label="مزايا التسوق">
+      <div class="luxellia-container">
+        <div class="luxellia-features-grid">
+          <div class="luxellia-feature-item">
+            <div class="luxellia-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h4 class="luxellia-feature-title">شحن موثوق وسريع</h4>
+            <p class="luxellia-feature-desc">توصيل لكافة مدن المملكة بتغليف عازل مخصص لسلامة الزجاج العطري.</p>
+          </div>
+
+          <div class="luxellia-feature-item">
+            <div class="luxellia-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <h4 class="luxellia-feature-title">دفع إلكتروني آمن</h4>
+            <p class="luxellia-feature-desc">مدى، فيزا، ماستركارد، Apple Pay وخيارات تقسيط تابي وتمارا.</p>
+          </div>
+
+          <div class="luxellia-feature-item">
+            <div class="luxellia-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h4 class="luxellia-feature-title">خدمة عملاء متخصصة</h4>
+            <p class="luxellia-feature-desc">استشارات لمساعدتكم في اختيار العطر المناسب ومتابعة كافة الطلبات.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Editorial Message -->
+    <section class="luxellia-section luxellia-welcome-section" id="about" aria-labelledby="welcomeTitle">
+      <div class="luxellia-container">
+        <div class="luxellia-welcome-box">
+          <span class="luxellia-welcome-accent" aria-hidden="true">LUXELLIA PARFUMS</span>
+          <h2 class="luxellia-welcome-title" id="welcomeTitle">مرحباً بكم في عالم الأناقة العطرية</h2>
+          <p class="luxellia-welcome-lead">
+            «العطر ليس مجرد لمسة نهائية، بل هو بصمة الذاكرة وأناقة الحضور غير المرئية.»
+          </p>
+          <p class="luxellia-welcome-body">
+            تأسست Luxellia لتجمع بين الأصالة العالمية والذوق الرفيع. نحن هنا لنقدم لعملائنا في المملكة تجربة تسوق راقية تتسم بالشفافية والهدوء والفخامة غير المتكلفة، حيث تحظى كل زجاجة عطر بالاحترام الذي تستحقه.
+          </p>
+          <div class="luxellia-welcome-sig">
+            <span>فريق Luxellia Parfums</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Organized Footer -->
+  <footer class="luxellia-footer" id="support">
+    <div class="luxellia-container luxellia-footer-inner">
+      <!-- Col 1: Brand & Bio -->
+      <div class="luxellia-footer-col luxellia-footer-brand-col">
+        <img src="assets/logo.svg" alt="Luxellia Parfums" class="luxellia-footer-logo" width="160" height="38">
+        <p class="luxellia-footer-bio">
+          متجر سعودي متخصص في توفير العطور العالمية الأصلية وعطور النيش الفاخرة، موثق بسجل تجاري رسمي ومعتمد لتقديم تجربة تسوق استثنائية.
+        </p>
+        <div class="luxellia-footer-tax">
+          <span>الرقم الضريبي: 300000000000003</span>
+          <span>معروف: متجر موثق</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="luxellia-footer-col">
+        <h4 class="luxellia-footer-heading">أقسام المتجر</h4>
+        <ul class="luxellia-footer-links">
+          <li><a href="#categories">عطور رجالية</a></li>
+          <li><a href="#categories">عطور نسائية</a></li>
+          <li><a href="#categories">عطور نيش</a></li>
+          <li><a href="#categories">عينات العطور</a></li>
+          <li><a href="#brands">الماركات العالمية</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Customer Service & Policies -->
+      <div class="luxellia-footer-col">
+        <h4 class="luxellia-footer-heading">خدمة العملاء</h4>
+        <ul class="luxellia-footer-links">
+          <li><a href="#policy-return">سياسة الاستبدال والاسترجاع</a></li>
+          <li><a href="#policy-shipping">الشحن والتوصيل</a></li>
+          <li><a href="#policy-privacy">سياسة الخصوصية</a></li>
+          <li><a href="#policy-terms">الشروط والأحكام</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Socials -->
+      <div class="luxellia-footer-col">
+        <h4 class="luxellia-footer-heading">تواصل معنا</h4>
+        <p class="luxellia-footer-contact-item">واتساب: +966 50 000 0000</p>
+        <p class="luxellia-footer-contact-item">البريد: care@luxellia-parfums.com</p>
+        <p class="luxellia-footer-contact-item">أوقات العمل: 9 ص – 10 م</p>
+        <div class="luxellia-social-links" aria-label="حسابات التواصل الاجتماعي">
+          <a href="#" class="luxellia-social-icon" aria-label="Instagram">IG</a>
+          <a href="#" class="luxellia-social-icon" aria-label="Twitter / X">X</a>
+          <a href="#" class="luxellia-social-icon" aria-label="TikTok">TT</a>
+          <a href="#" class="luxellia-social-icon" aria-label="Snapchat">SC</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="luxellia-footer-bottom">
+      <div class="luxellia-container luxellia-footer-bottom-inner">
+        <p class="luxellia-copyright">جميع الحقوق محفوظة &copy; 2026 متجر Luxellia Parfums</p>
+        <div class="luxellia-payment-icons">
+          <span class="luxellia-pay-badge">مدى mada</span>
+          <span class="luxellia-pay-badge">Apple Pay</span>
+          <span class="luxellia-pay-badge">Visa</span>
+          <span class="luxellia-pay-badge">Mastercard</span>
+          <span class="luxellia-pay-badge">Tabby</span>
+          <span class="luxellia-pay-badge">Tamara</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container for Mock Actions -->
+  <div id="luxelliaToast" class="luxellia-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="preview.js"></script>
+</body>
+</html>
