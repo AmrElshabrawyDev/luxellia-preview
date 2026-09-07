@@ -263,6 +263,13 @@ button {
 .luxellia-brand-link {
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.luxellia-brand-link:focus-visible {
+  outline: 2px solid var(--lx-blue);
+  outline-offset: 4px;
 }
 
 .luxellia-logo {
@@ -561,7 +568,7 @@ button {
   width: 170px;
 }
 
-.luxellia-brand-link {
+.luxellia-brand-card-link {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -582,8 +589,8 @@ button {
 }
 
 /* Subtle luxury 3D tilt, elevation and refined silver border */
-.luxellia-brand-link:hover,
-.luxellia-brand-card:focus-within .luxellia-brand-link {
+.luxellia-brand-card-link:hover,
+.luxellia-brand-card:focus-within .luxellia-brand-card-link {
   transform: translateY(-6px) scale(1.04) rotateX(4deg);
   border-color: var(--lx-silver);
   box-shadow:
@@ -592,7 +599,7 @@ button {
   background-color: #ffffff;
 }
 
-.luxellia-brand-link:focus-visible {
+.luxellia-brand-card-link:focus-visible {
   outline: 2px solid var(--lx-blue);
   outline-offset: 3px;
 }
@@ -614,7 +621,7 @@ button {
   transition: transform var(--lx-transition-fast);
 }
 
-.luxellia-brand-link:hover .luxellia-brand-logo {
+.luxellia-brand-card-link:hover .luxellia-brand-logo {
   transform: scale(1.04);
 }
 
@@ -715,7 +722,142 @@ button {
 }
 
 /* ==========================================================================
-   6. Products Grid
+   6. Exclusive Product Offers Section
+   ========================================================================== */
+.luxellia-offers-section {
+  background: linear-gradient(180deg, var(--lx-ivory) 0%, #ffffff 100%);
+  border-block: 1px solid var(--lx-border);
+}
+
+.luxellia-offers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--lx-space-lg);
+}
+
+.luxellia-offer-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-md);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--lx-shadow-subtle);
+  transition:
+    transform var(--lx-transition-base),
+    box-shadow var(--lx-transition-base),
+    border-color var(--lx-transition-base);
+}
+
+.luxellia-offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(23, 50, 77, 0.09);
+  border-color: var(--lx-silver);
+}
+
+.luxellia-offer-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, var(--lx-navy) 0%, var(--lx-blue) 100%);
+  color: var(--lx-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--lx-radius-pill);
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(23, 50, 77, 0.2);
+}
+
+.luxellia-offer-media {
+  background-color: var(--lx-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--lx-space-lg);
+  aspect-ratio: 1 / 1;
+}
+
+.luxellia-offer-img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  transition: transform 300ms ease;
+}
+
+.luxellia-offer-card:hover .luxellia-offer-img {
+  transform: scale(1.05);
+}
+
+.luxellia-offer-content {
+  padding: var(--lx-space-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--lx-space-sm);
+}
+
+.luxellia-offer-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--lx-blue);
+  display: block;
+}
+
+.luxellia-offer-title {
+  font-family: var(--lx-font-serif);
+  font-size: 1.25rem;
+  color: var(--lx-navy);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.luxellia-offer-desc {
+  font-size: 0.875rem;
+  color: var(--lx-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.luxellia-offer-pricing {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--lx-space-sm);
+  margin-top: var(--lx-space-xs);
+}
+
+.luxellia-offer-price-current {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+}
+
+.luxellia-offer-price-old {
+  font-size: 0.95rem;
+  color: var(--lx-silver);
+  text-decoration: line-through;
+}
+
+.luxellia-offer-discount-chip {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #2e7d32;
+  background-color: rgba(46, 125, 50, 0.08);
+  padding: 2px 8px;
+  border-radius: var(--lx-radius-pill);
+}
+
+.luxellia-offer-btn {
+  margin-top: var(--lx-space-sm);
+  width: 100%;
+}
+
+/* ==========================================================================
+   7. Products Grid
    ========================================================================== */
 .luxellia-products-grid {
   display: grid;
@@ -856,39 +998,6 @@ button {
 }
 
 /* ==========================================================================
-   7. Brands Section
-   ========================================================================== */
-.luxellia-brands-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--lx-space-md);
-}
-
-.luxellia-brand-pill {
-  background-color: var(--lx-white);
-  border: 1px solid var(--lx-border);
-  padding: 12px 24px;
-  border-radius: var(--lx-radius-sm);
-  font-family: var(--lx-font-serif);
-  font-size: 1rem;
-  letter-spacing: 1.5px;
-  color: var(--lx-navy);
-  transition: border-color var(--lx-transition-fast);
-}
-
-.luxellia-brand-pill:hover {
-  border-color: var(--lx-navy);
-}
-
-.luxellia-brands-footnote {
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--lx-muted);
-  margin-top: var(--lx-space-lg);
-}
-
-/* ==========================================================================
    8. Authenticity & Quality
    ========================================================================== */
 .luxellia-auth-grid {
@@ -959,7 +1068,7 @@ button {
 }
 
 .luxellia-feature-desc {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--lx-muted);
   text-align: center;
 }
@@ -1211,6 +1320,14 @@ button {
     display: block;
   }
 
+  .luxellia-offers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .luxellia-offer-card {
+    grid-template-columns: 200px 1fr;
+  }
+
   .luxellia-products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1241,6 +1358,10 @@ button {
 
   .luxellia-nav {
     display: block;
+  }
+
+  .luxellia-offer-card {
+    grid-template-columns: 220px 1fr;
   }
 
   .luxellia-section {
@@ -1280,8 +1401,11 @@ button {
     -webkit-mask-image: none !important;
   }
 
-  .luxellia-brand-link:hover,
-  .luxellia-brand-card:focus-within .luxellia-brand-link {
+  .luxellia-brand-card-link:hover,
+  .luxellia-brand-card:focus-within .luxellia-brand-card-link,
+  .luxellia-offer-card:hover,
+  .luxellia-offer-card:hover .luxellia-offer-img {
     transform: none !important;
   }
 }
+
