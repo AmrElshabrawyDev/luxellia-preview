@@ -959,7 +959,7 @@ button {
 }
 
 .luxellia-feature-desc {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: var(--lx-muted);
   text-align: center;
 }
@@ -1285,4 +1285,3 @@ button {
     transform: none !important;
   }
 }
-
