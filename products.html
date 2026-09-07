@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="متجر Luxellia Parfums - نموذج بصري تفاعلي لصفحة تصنيف المنتجات يحاكي المظهر المتوقع في ثيم رائد على منصة سلة">
+  <meta name="robots" content="noindex,nofollow">
+  <title>كافة العطور الفاخرة | Luxellia Parfums (معاينة تجريبية)</title>
+  <link rel="stylesheet" href="styles.css?v=1.3.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="luxellia-body">
+  <!-- Mock Notice Banner -->
+  <div class="luxellia-mock-banner" role="alert">
+    <div class="luxellia-container luxellia-mock-banner-inner">
+      <span class="luxellia-mock-tag">تنبيه المعاينة</span>
+      <span class="luxellia-unpublished-tag">نسخة تجريبية غير منشورة</span>
+      <span>نموذج بصري تفاعلي لصفحة تصنيف المنتجات في ثيم رائد — البيانات والصور تجريبية بالكامل</span>
+      <span class="luxellia-mock-note">(Mock Preview Environment)</span>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="luxellia-top-bar">
+    <div class="luxellia-container luxellia-top-bar-inner">
+      <p class="luxellia-top-bar-text">شحن مجاني للطلبات فوق 350 ر.س في كافة مدن المملكة | تجربة عطرية فاخرة</p>
+      <div class="luxellia-top-bar-links">
+        <a href="index.html#about" class="luxellia-link-subtle">من نحن</a>
+        <a href="index.html#authenticity" class="luxellia-link-subtle">معايير الجودة</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="luxellia-header" id="main-header">
+    <div class="luxellia-container luxellia-header-inner">
+      <!-- Mobile Menu Toggle Button -->
+      <button class="luxellia-menu-btn" id="menuToggle" aria-label="فتح القائمة الرئيسية" aria-expanded="false" aria-controls="mainNav">
+        <span class="luxellia-menu-icon" aria-hidden="true"></span>
+      </button>
+
+      <!-- Logo -->
+      <div class="luxellia-brand">
+        <a href="index.html" class="luxellia-brand-link" aria-label="Luxellia Parfums الرئيسية">
+          <img src="assets/logo.svg" alt="Luxellia Parfums" class="luxellia-logo" width="180" height="42">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="luxellia-nav" id="mainNav" aria-label="التنقل الرئيسي">
+        <ul class="luxellia-nav-list">
+          <li class="luxellia-nav-item"><a href="index.html" class="luxellia-nav-link">الرئيسية</a></li>
+          <li class="luxellia-nav-item"><a href="products.html" class="luxellia-nav-link active">كافة العطور</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=men" class="luxellia-nav-link">عطور رجالية</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=women" class="luxellia-nav-link">عطور نسائية</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=niche" class="luxellia-nav-link">عطور نيش</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=samples" class="luxellia-nav-link">عينات العطور</a></li>
+          <li class="luxellia-nav-item"><a href="index.html#brands" class="luxellia-nav-link">الماركات</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?offers=true" class="luxellia-nav-link">العروض الحصرية</a></li>
+          <li class="luxellia-nav-item"><a href="index.html#authenticity" class="luxellia-nav-link">معايير الجودة</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Utilities -->
+      <div class="luxellia-header-actions">
+        <!-- Search Trigger (Focuses catalog search input) -->
+        <button class="luxellia-action-btn" id="searchBtn" aria-label="البحث عن عطر">
+          <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Account -->
+        <a href="#account" class="luxellia-action-btn" aria-label="تسجيل الدخول / الحساب التجريبي">
+          <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+
+        <!-- Cart Badge -->
+        <button class="luxellia-action-btn luxellia-cart-btn" id="cartBtn" aria-label="سلة المشتريات التجريبية: 0 منتجات">
+          <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="luxellia-cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumbs Navigation -->
+    <nav class="luxellia-breadcrumbs-bar" aria-label="مسار التصفح">
+      <div class="luxellia-container">
+        <ol class="luxellia-breadcrumbs-list">
+          <li class="luxellia-breadcrumb-item">
+            <a href="index.html" class="luxellia-breadcrumb-link">الرئيسية</a>
+          </li>
+          <li class="luxellia-breadcrumb-separator" aria-hidden="true">/</li>
+          <li class="luxellia-breadcrumb-item" aria-current="page">
+            <span class="luxellia-breadcrumb-current" id="breadcrumbCategoryName">كافة العطور</span>
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Products Category Header Banner -->
+    <section class="luxellia-catalog-header-section" aria-labelledby="catalogTitle">
+      <div class="luxellia-container">
+        <div class="luxellia-catalog-banner">
+          <div class="luxellia-catalog-banner-text">
+            <span class="luxellia-catalog-badge">مجموعة Luxellia المعتمدة</span>
+            <h1 class="luxellia-catalog-title" id="catalogTitle">كافة العطور الفاخرة</h1>
+            <p class="luxellia-catalog-desc" id="catalogDescription">
+              تشكيلة حصرية من أرقى العطور العالمية وعطور النيش الأصلية، منتقاة بعناية لترضي الذائقة الرفيعة وفق أعلى معايير الجودة.
+            </p>
+          </div>
+
+          <!-- Quick Category Filter Pills -->
+          <div class="luxellia-catalog-pills" role="tablist" aria-label="تصفية سريعة بحسب الفئة">
+            <button class="luxellia-pill-btn active" data-filter-cat="all" role="tab" aria-selected="true">
+              الكل <span class="luxellia-pill-count">(12)</span>
+            </button>
+            <button class="luxellia-pill-btn" data-filter-cat="men" role="tab" aria-selected="false">
+              عطور رجالية <span class="luxellia-pill-count">(4)</span>
+            </button>
+            <button class="luxellia-pill-btn" data-filter-cat="women" role="tab" aria-selected="false">
+              عطور نسائية <span class="luxellia-pill-count">(3)</span>
+            </button>
+            <button class="luxellia-pill-btn" data-filter-cat="niche" role="tab" aria-selected="false">
+              عطور نيش <span class="luxellia-pill-count">(3)</span>
+            </button>
+            <button class="luxellia-pill-btn" data-filter-cat="samples" role="tab" aria-selected="false">
+              عينات العطور <span class="luxellia-pill-count">(2)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Catalog Controls & Content -->
+    <section class="luxellia-section luxellia-catalog-section" aria-label="قائمة المنتجات والتصفية">
+      <div class="luxellia-container">
+        <!-- Catalog Toolbar -->
+        <div class="luxellia-catalog-toolbar">
+          <!-- Live Search Box inside Products -->
+          <div class="luxellia-catalog-search-wrap">
+            <label for="catalogSearchInput" class="sr-only">البحث في المنتجات</label>
+            <input type="search" id="catalogSearchInput" class="luxellia-catalog-search-input" placeholder="ابحث باسم العطر أو الدار العطرية..." autocomplete="off">
+            <button type="button" class="luxellia-search-clear-btn" id="searchClearBtn" aria-label="مسح نص البحث" hidden>
+              &times;
+            </button>
+          </div>
+
+          <!-- Active Results Count -->
+          <div class="luxellia-catalog-results-info">
+            <span class="luxellia-results-text" id="resultsCount">عرض 12 منتجاً</span>
+          </div>
+
+          <!-- Mobile Filter Drawer Trigger -->
+          <button class="luxellia-mobile-filter-trigger" id="openFilterDrawerBtn" aria-expanded="false" aria-controls="filterDrawer">
+            <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            <span>تصفية المنتجات</span>
+            <span class="luxellia-active-filter-badge" id="mobileFilterBadge" hidden>0</span>
+          </button>
+
+          <!-- Sorting Dropdown -->
+          <div class="luxellia-catalog-sort-wrap">
+            <label for="sortSelect" class="luxellia-sort-label">ترتيب بحسب:</label>
+            <select id="sortSelect" class="luxellia-sort-select" aria-label="ترتيب المنتجات">
+              <option value="featured">المقترحة</option>
+              <option value="newest">الأحدث</option>
+              <option value="price-asc">السعر: من الأقل للأعلى</option>
+              <option value="price-desc">السعر: من الأعلى للأقل</option>
+              <option value="rating-desc">الأعلى تقييماً</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Catalog Layout: Desktop Sidebar + Products Grid -->
+        <div class="luxellia-catalog-layout">
+          <!-- Desktop Filter Sidebar -->
+          <aside class="luxellia-catalog-sidebar" id="catalogSidebar" aria-label="فلاتر تصفية المنتجات">
+            <div class="luxellia-sidebar-header">
+              <h2 class="luxellia-sidebar-title">تصفية النتائج</h2>
+              <button type="button" class="luxellia-reset-filters-link" id="desktopResetBtn">إعادة ضبط الكل</button>
+            </div>
+
+            <!-- Filter Group 1: Category -->
+            <fieldset class="luxellia-filter-group">
+              <legend class="luxellia-filter-legend">التصنيف العطري</legend>
+              <div class="luxellia-filter-options">
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="catFilter" value="men" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">عطور رجالية</span>
+                  <span class="luxellia-filter-qty">(4)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="catFilter" value="women" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">عطور نسائية</span>
+                  <span class="luxellia-filter-qty">(3)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="catFilter" value="niche" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">عطور نيش</span>
+                  <span class="luxellia-filter-qty">(3)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="catFilter" value="samples" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">عينات العطور</span>
+                  <span class="luxellia-filter-qty">(2)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Filter Group 2: Brands -->
+            <fieldset class="luxellia-filter-group">
+              <legend class="luxellia-filter-legend">الدار العطرية</legend>
+              <div class="luxellia-filter-options">
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="brandFilter" value="Maison Mock" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Maison Mock</span>
+                  <span class="luxellia-filter-qty">(2)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="brandFilter" value="Royal Test" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Royal Test</span>
+                  <span class="luxellia-filter-qty">(2)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="brandFilter" value="Niche Demo" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Niche Demo</span>
+                  <span class="luxellia-filter-qty">(2)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="brandFilter" value="Parfums Prestige" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Parfums Prestige</span>
+                  <span class="luxellia-filter-qty">(2)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="brandFilter" value="Atelier Test" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Atelier Test</span>
+                  <span class="luxellia-filter-qty">(3)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="brandFilter" value="Crown Mock" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Crown Mock</span>
+                  <span class="luxellia-filter-qty">(1)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Filter Group 3: Price Range -->
+            <fieldset class="luxellia-filter-group">
+              <legend class="luxellia-filter-legend">نطاق السعر (ر.س)</legend>
+              <div class="luxellia-price-inputs">
+                <div class="luxellia-price-field">
+                  <label for="minPriceInput" class="luxellia-price-label">من:</label>
+                  <input type="number" id="minPriceInput" class="luxellia-price-input" min="100" max="800" value="100" step="10">
+                </div>
+                <div class="luxellia-price-field">
+                  <label for="maxPriceInput" class="luxellia-price-label">إلى:</label>
+                  <input type="number" id="maxPriceInput" class="luxellia-price-input" min="100" max="800" value="800" step="10">
+                </div>
+              </div>
+              <input type="range" id="priceRangeSlider" class="luxellia-price-slider" min="100" max="800" value="800" step="10" aria-label="الحد الأقصى للسعر">
+              <div class="luxellia-price-range-display">
+                <span>100 ر.س</span>
+                <span id="priceDisplayMax">800 ر.س</span>
+              </div>
+            </fieldset>
+
+            <!-- Filter Group 4: Concentration -->
+            <fieldset class="luxellia-filter-group">
+              <legend class="luxellia-filter-legend">تركيز العطر</legend>
+              <div class="luxellia-filter-options">
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="concentrationFilter" value="edp" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Eau de Parfum (ماء عطر)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="concentrationFilter" value="extrait" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">Extrait de Parfum (خلاصة عطر)</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="concentrationFilter" value="sample" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">مجموعات الاكتشاف (Samples)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Filter Group 5: Volume -->
+            <fieldset class="luxellia-filter-group">
+              <legend class="luxellia-filter-legend">حجم العبوة</legend>
+              <div class="luxellia-filter-options">
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="volumeFilter" value="50ml" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">50 مل</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="volumeFilter" value="75ml" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">75 مل</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="volumeFilter" value="100ml" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">100 مل</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" name="volumeFilter" value="samples" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">عينات مصغرة</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Filter Group 6: Special Status -->
+            <fieldset class="luxellia-filter-group">
+              <legend class="luxellia-filter-legend">عروض وحالة التوفر</legend>
+              <div class="luxellia-filter-options">
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" id="onlyOffersCheck" class="luxellia-filter-check">
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">عروض وخصومات حصرية فقط</span>
+                </label>
+                <label class="luxellia-filter-checkbox-label">
+                  <input type="checkbox" id="inStockCheck" class="luxellia-filter-check" checked>
+                  <span class="luxellia-check-custom" aria-hidden="true"></span>
+                  <span class="luxellia-filter-name">المتوفر في المخزون فقط</span>
+                </label>
+              </div>
+            </fieldset>
+          </aside>
+
+          <!-- Products Grid & Results Area -->
+          <div class="luxellia-catalog-main">
+            <!-- Active Filters Tags Bar -->
+            <div class="luxellia-active-filters-bar" id="activeFiltersBar" hidden>
+              <span class="luxellia-active-filters-title">الفلاتر النشطة:</span>
+              <div class="luxellia-active-tags-list" id="activeTagsList"></div>
+              <button type="button" class="luxellia-clear-all-tags-btn" id="clearAllTagsBtn">مسح الفلاتر</button>
+            </div>
+
+            <!-- Products Grid Container -->
+            <div class="luxellia-products-grid luxellia-catalog-grid" id="productsGrid" aria-live="polite">
+              <!-- Products injected dynamically via safe DOM methods -->
+            </div>
+
+            <!-- Empty Results State -->
+            <div class="luxellia-empty-state" id="emptyStateContainer" hidden>
+              <div class="luxellia-empty-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </div>
+              <h3 class="luxellia-empty-title">لا توجد عطور مطابقة لخيارات التصفية</h3>
+              <p class="luxellia-empty-desc">
+                لم نتمكن من العثور على منتجات تطابق معايير البحث أو الفلاتر المحددة. جرب إزالة بعض الفلاتر أو إعادة ضبط البحث.
+              </p>
+              <button type="button" class="luxellia-btn luxellia-btn-secondary" id="emptyResetBtn">
+                إعادة ضبط كافة الفلاتر
+              </button>
+            </div>
+
+            <!-- Load More Action (No pagination bar, per instruction) -->
+            <div class="luxellia-load-more-wrap" id="loadMoreWrap">
+              <button type="button" class="luxellia-btn luxellia-btn-secondary luxellia-load-more-btn" id="loadMoreBtn">
+                عرض المزيد من العطور <span id="loadMoreRemaining">(4 متبقية)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Filters Drawer (Off-canvas) -->
+  <div class="luxellia-filter-drawer" id="filterDrawer" role="dialog" aria-modal="true" aria-labelledby="filterDrawerTitle" hidden>
+    <div class="luxellia-drawer-backdrop" id="filterDrawerBackdrop" aria-hidden="true"></div>
+    <div class="luxellia-drawer-panel" role="document">
+      <div class="luxellia-drawer-header">
+        <h2 class="luxellia-drawer-title" id="filterDrawerTitle">تصفية المنتجات</h2>
+        <button type="button" class="luxellia-drawer-close-btn" id="closeFilterDrawerBtn" aria-label="إغلاق نافذة التصفية">
+          &times;
+        </button>
+      </div>
+      <div class="luxellia-drawer-body" id="drawerFilterBody">
+        <!-- Cloned or synced filters inside drawer -->
+      </div>
+      <div class="luxellia-drawer-footer">
+        <button type="button" class="luxellia-btn luxellia-btn-primary" id="applyDrawerFiltersBtn">تطبيق التصفية</button>
+        <button type="button" class="luxellia-btn luxellia-btn-secondary" id="resetDrawerFiltersBtn">إعادة تعيين</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessible Quick View Modal -->
+  <div class="luxellia-modal-wrap" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle" hidden>
+    <div class="luxellia-modal-backdrop" id="quickViewBackdrop" aria-hidden="true"></div>
+    <div class="luxellia-modal-container" role="document">
+      <button type="button" class="luxellia-modal-close-btn" id="closeQuickViewBtn" aria-label="إغلاق المعاينة السريعة">
+        &times;
+      </button>
+
+      <div class="luxellia-quickview-content">
+        <div class="luxellia-quickview-media">
+          <img src="assets/prod-1.svg" alt="" id="quickViewImg" class="luxellia-quickview-img" width="360" height="360">
+          <span class="luxellia-badge luxellia-badge-mock" id="quickViewBadge">عينة تجريبية</span>
+        </div>
+
+        <div class="luxellia-quickview-details">
+          <span class="luxellia-quickview-brand" id="quickViewBrand">Maison Mock</span>
+          <h2 class="luxellia-quickview-title" id="quickViewTitle">أتيليه سوفرين</h2>
+          <div class="luxellia-quickview-spec" id="quickViewSpec">Eau de Parfum — 100 مل</div>
+
+          <div class="luxellia-quickview-rating" id="quickViewRatingWrap">
+            <span class="luxellia-stars" aria-hidden="true">★★★★★</span>
+            <span class="luxellia-rating-score" id="quickViewRating">4.9</span>
+            <span class="luxellia-reviews-count" id="quickViewReviews">(38 تقييماً تجريبياً)</span>
+          </div>
+
+          <div class="luxellia-quickview-pricing">
+            <span class="luxellia-price-current" id="quickViewPrice">450 ر.س</span>
+            <span class="luxellia-price-old" id="quickViewOldPrice" hidden></span>
+            <span class="luxellia-tax-note">شامل ضريبة القيمة المضافة</span>
+          </div>
+
+          <p class="luxellia-quickview-desc" id="quickViewDesc">
+            عطر رجالي كلاسيكي يجمع بين نفحات خشب الأرز والبرغموت الإيطالي مع لمسة ناعمة من الفانيليا الدافئة.
+          </p>
+
+          <div class="luxellia-quickview-notes-box">
+            <span class="luxellia-notes-label">الهرم العطري والنوتات:</span>
+            <p class="luxellia-notes-text" id="quickViewNotes">البرغموت، خشب الأرز، العنبر النقي</p>
+          </div>
+
+          <div class="luxellia-quickview-actions">
+            <button type="button" class="luxellia-btn luxellia-btn-primary luxellia-btn-add" id="quickViewAddBtn" data-id="p1" data-name="أتيليه سوفرين">
+              إضافة للسلة التجريبية
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Organized Footer -->
+  <footer class="luxellia-footer" id="support">
+    <div class="luxellia-container luxellia-footer-inner">
+      <!-- Col 1: Brand & Bio -->
+      <div class="luxellia-footer-col luxellia-footer-brand-col">
+        <a href="index.html">
+          <img src="assets/logo.svg" alt="Luxellia Parfums" class="luxellia-footer-logo" width="160" height="38">
+        </a>
+        <p class="luxellia-footer-bio">
+          متجر متخصص في توفير العطور العالمية الأصلية وعطور النيش الفاخرة، يهدف لتقديم تجربة تسوق راقية وخدمة عملاء استثنائية.
+        </p>
+        <div class="luxellia-footer-tax">
+          <span>بيانات التوثيق: تضاف بعد اعتماد بيانات المتجر الرسمية</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="luxellia-footer-col">
+        <h4 class="luxellia-footer-heading">أقسام المتجر</h4>
+        <ul class="luxellia-footer-links">
+          <li><a href="products.html?category=men">عطور رجالية</a></li>
+          <li><a href="products.html?category=women">عطور نسائية</a></li>
+          <li><a href="products.html?category=niche">عطور نيش</a></li>
+          <li><a href="products.html?category=samples">عينات العطور</a></li>
+          <li><a href="index.html#brands">الماركات العالمية</a></li>
+          <li><a href="products.html?offers=true">العروض الحصرية</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Customer Service & Policies -->
+      <div class="luxellia-footer-col">
+        <h4 class="luxellia-footer-heading">خدمة العملاء</h4>
+        <ul class="luxellia-footer-links">
+          <li><a href="index.html#policy-return">سياسة الاستبدال والاسترجاع</a></li>
+          <li><a href="index.html#policy-shipping">الشحن والتوصيل</a></li>
+          <li><a href="index.html#policy-privacy">سياسة الخصوصية</a></li>
+          <li><a href="index.html#policy-terms">الشروط والأحكام</a></li>
+          <li><a href="index.html#contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Socials -->
+      <div class="luxellia-footer-col">
+        <h4 class="luxellia-footer-heading">تواصل معنا</h4>
+        <p class="luxellia-footer-contact-item">واتساب: يضاف بعد اعتماد بيانات التواصل الرسمية</p>
+        <p class="luxellia-footer-contact-item">البريد: care@luxellia-parfums.com (تجريبي)</p>
+        <p class="luxellia-footer-contact-item">أوقات العمل: خدمة عملاء على مدار الساعة</p>
+        <div class="luxellia-social-links" aria-label="حسابات التواصل الاجتماعي">
+          <a href="#support" class="luxellia-social-icon" aria-label="Instagram">IG</a>
+          <a href="#support" class="luxellia-social-icon" aria-label="Twitter / X">X</a>
+          <a href="#support" class="luxellia-social-icon" aria-label="TikTok">TT</a>
+          <a href="#support" class="luxellia-social-icon" aria-label="Snapchat">SC</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="luxellia-footer-bottom">
+      <div class="luxellia-container luxellia-footer-bottom-inner">
+        <p class="luxellia-copyright">جميع الحقوق محفوظة &copy; 2026 متجر Luxellia Parfums</p>
+        <div class="luxellia-payment-icons">
+          <span class="luxellia-pay-badge">مدى mada</span>
+          <span class="luxellia-pay-badge">Apple Pay</span>
+          <span class="luxellia-pay-badge">Visa</span>
+          <span class="luxellia-pay-badge">Mastercard</span>
+          <span class="luxellia-pay-badge">Tabby</span>
+          <span class="luxellia-pay-badge">Tamara</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container for Mock Actions -->
+  <div id="luxelliaToast" class="luxellia-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Core Preview Script & Products Controller -->
+  <script src="preview.js?v=1.3.0"></script>
+  <script src="products.js?v=1.3.0"></script>
+</body>
+</html>

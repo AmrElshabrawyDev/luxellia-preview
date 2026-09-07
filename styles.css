@@ -1068,7 +1068,7 @@ button {
 }
 
 .luxellia-feature-desc {
-  font-size: 0.875rem;
+  font-size: 14px;
   color: var(--lx-muted);
   text-align: center;
 }
@@ -1267,10 +1267,802 @@ button {
 }
 
 /* ==========================================================================
-   12. Responsive Breakpoints
+   12. Products Catalog Page & Filter Toolbar
    ========================================================================== */
 
-/* Mobile Menu State (Small screens) */
+/* Accessibility utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Breadcrumbs Bar */
+.luxellia-breadcrumbs-bar {
+  background-color: var(--lx-ivory);
+  border-bottom: 1px solid var(--lx-border);
+  padding-block: var(--lx-space-xs);
+  font-size: 0.8rem;
+}
+
+.luxellia-breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  gap: var(--lx-space-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--lx-muted);
+}
+
+.luxellia-breadcrumb-link {
+  color: var(--lx-navy);
+  text-decoration: none;
+  transition: color var(--lx-transition-fast);
+}
+
+.luxellia-breadcrumb-link:hover {
+  color: var(--lx-blue);
+}
+
+.luxellia-breadcrumb-separator {
+  color: var(--lx-silver);
+}
+
+.luxellia-breadcrumb-current {
+  color: var(--lx-blue);
+  font-weight: 600;
+}
+
+/* Catalog Header Banner */
+.luxellia-catalog-header-section {
+  background: linear-gradient(180deg, var(--lx-ivory) 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--lx-border);
+  padding-block: var(--lx-space-xl) var(--lx-space-lg);
+}
+
+.luxellia-catalog-banner {
+  text-align: center;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.luxellia-catalog-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--lx-silver);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--lx-space-xs);
+}
+
+.luxellia-catalog-title {
+  font-family: var(--lx-font-serif);
+  font-size: 2.2rem;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-xs);
+  line-height: 1.25;
+}
+
+.luxellia-catalog-desc {
+  font-size: 0.95rem;
+  color: var(--lx-muted);
+  line-height: 1.65;
+  margin-bottom: var(--lx-space-lg);
+}
+
+/* Quick Category Filter Pills */
+.luxellia-catalog-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--lx-space-xs);
+}
+
+.luxellia-pill-btn {
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-pill);
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--lx-text);
+  cursor: pointer;
+  transition: all var(--lx-transition-fast);
+}
+
+.luxellia-pill-btn:hover {
+  border-color: var(--lx-silver);
+  color: var(--lx-navy);
+}
+
+.luxellia-pill-btn.active {
+  background-color: var(--lx-navy);
+  border-color: var(--lx-navy);
+  color: var(--lx-white);
+}
+
+.luxellia-pill-count {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-right: 4px;
+}
+
+/* Catalog Toolbar */
+.luxellia-catalog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--lx-space-md);
+  padding-block: var(--lx-space-md);
+  margin-bottom: var(--lx-space-lg);
+  border-bottom: 1px solid var(--lx-border);
+}
+
+.luxellia-catalog-search-wrap {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 380px;
+}
+
+.luxellia-catalog-search-input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-sm);
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: var(--lx-text);
+  background-color: var(--lx-white);
+  transition: border-color var(--lx-transition-fast), box-shadow var(--lx-transition-fast);
+}
+
+.luxellia-catalog-search-input:focus {
+  outline: none;
+  border-color: var(--lx-blue);
+  box-shadow: 0 0 0 3px rgba(47, 95, 138, 0.12);
+}
+
+.luxellia-search-clear-btn {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--lx-muted);
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+.luxellia-catalog-results-info {
+  font-size: 0.875rem;
+  color: var(--lx-muted);
+  font-weight: 500;
+}
+
+.luxellia-mobile-filter-trigger {
+  display: none;
+  align-items: center;
+  gap: var(--lx-space-xs);
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-sm);
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--lx-navy);
+  cursor: pointer;
+}
+
+.luxellia-active-filter-badge {
+  background-color: var(--lx-navy);
+  color: var(--lx-white);
+  border-radius: var(--lx-radius-pill);
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  font-weight: 700;
+}
+
+.luxellia-catalog-sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--lx-space-xs);
+}
+
+.luxellia-sort-label {
+  font-size: 0.85rem;
+  color: var(--lx-muted);
+  white-space: nowrap;
+}
+
+.luxellia-sort-select {
+  padding: 8px 12px;
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-sm);
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: var(--lx-navy);
+  background-color: var(--lx-white);
+  cursor: pointer;
+}
+
+.luxellia-sort-select:focus {
+  outline: none;
+  border-color: var(--lx-blue);
+}
+
+/* Catalog Layout */
+.luxellia-catalog-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--lx-space-xl);
+  align-items: start;
+}
+
+/* Sidebar Filters */
+.luxellia-catalog-sidebar {
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-md);
+  padding: var(--lx-space-lg);
+  box-shadow: var(--lx-shadow-subtle);
+  position: sticky;
+  top: 90px;
+}
+
+.luxellia-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--lx-space-sm);
+  border-bottom: 1px solid var(--lx-border);
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-sidebar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+}
+
+.luxellia-reset-filters-link {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: var(--lx-blue);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.luxellia-filter-group {
+  border: none;
+  padding: 0;
+  margin: 0 0 var(--lx-space-lg) 0;
+}
+
+.luxellia-filter-legend {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-xs);
+  display: block;
+}
+
+.luxellia-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.luxellia-filter-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--lx-space-xs);
+  font-size: 0.85rem;
+  color: var(--lx-text);
+  cursor: pointer;
+}
+
+.luxellia-filter-check {
+  accent-color: var(--lx-navy);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.luxellia-filter-name {
+  flex: 1;
+}
+
+.luxellia-filter-qty {
+  font-size: 0.75rem;
+  color: var(--lx-silver);
+}
+
+/* Price range inputs */
+.luxellia-price-inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--lx-space-xs);
+  margin-bottom: var(--lx-space-xs);
+}
+
+.luxellia-price-field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.luxellia-price-label {
+  font-size: 0.75rem;
+  color: var(--lx-muted);
+}
+
+.luxellia-price-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-sm);
+  font-size: 0.8rem;
+  font-family: inherit;
+}
+
+.luxellia-price-slider {
+  width: 100%;
+  accent-color: var(--lx-navy);
+  cursor: pointer;
+  margin-block: var(--lx-space-xs);
+}
+
+.luxellia-price-range-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--lx-muted);
+}
+
+/* Active Tags Bar */
+.luxellia-active-filters-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--lx-space-xs);
+  background-color: var(--lx-ivory);
+  border: 1px solid var(--lx-border);
+  border-radius: var(--lx-radius-sm);
+  padding: 10px 14px;
+  margin-bottom: var(--lx-space-lg);
+}
+
+.luxellia-active-filters-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+}
+
+.luxellia-active-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.luxellia-active-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--lx-white);
+  border: 1px solid var(--lx-silver-soft);
+  border-radius: var(--lx-radius-pill);
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  color: var(--lx-navy);
+}
+
+.luxellia-tag-remove-btn {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--lx-muted);
+  cursor: pointer;
+  padding: 0;
+}
+
+.luxellia-clear-all-tags-btn {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: #a33a3a;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Catalog Grid Base (Mobile Default: 2 columns) */
+.luxellia-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--lx-space-md);
+}
+
+/* Product Card Custom Additions */
+.luxellia-card-quickview-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: rgba(23, 50, 77, 0.92);
+  color: var(--lx-white);
+  border: none;
+  border-radius: var(--lx-radius-pill);
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--lx-transition-fast);
+  white-space: nowrap;
+}
+
+.luxellia-product-card:hover .luxellia-card-quickview-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.luxellia-product-name-btn {
+  background: none;
+  border: none;
+  font-family: var(--lx-font-serif);
+  font-size: inherit;
+  color: var(--lx-navy);
+  font-weight: inherit;
+  text-align: right;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1.35;
+  transition: color var(--lx-transition-fast);
+}
+
+.luxellia-product-name-btn:hover {
+  color: var(--lx-blue);
+}
+
+.luxellia-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-block: 4px;
+}
+
+.luxellia-stars {
+  color: #f5a623;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.luxellia-rating-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+}
+
+.luxellia-badge-discount {
+  background-color: #2e7d32;
+  color: var(--lx-white);
+}
+
+/* Empty State */
+.luxellia-empty-state {
+  text-align: center;
+  padding: var(--lx-space-3xl) var(--lx-space-lg);
+  background-color: var(--lx-white);
+  border: 1px dashed var(--lx-silver);
+  border-radius: var(--lx-radius-md);
+}
+
+.luxellia-empty-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto var(--lx-space-md);
+  color: var(--lx-silver);
+}
+
+.luxellia-empty-title {
+  font-family: var(--lx-font-serif);
+  font-size: 1.35rem;
+  color: var(--lx-navy);
+  margin-bottom: var(--lx-space-xs);
+}
+
+.luxellia-empty-desc {
+  font-size: 0.9rem;
+  color: var(--lx-muted);
+  max-width: 480px;
+  margin: 0 auto var(--lx-space-lg);
+  line-height: 1.6;
+}
+
+/* Load More Wrap */
+.luxellia-load-more-wrap {
+  text-align: center;
+  margin-top: var(--lx-space-2xl);
+  padding-top: var(--lx-space-lg);
+}
+
+.luxellia-load-more-btn {
+  min-width: 260px;
+  padding-block: 12px;
+}
+
+.luxellia-catalog-cta-wrap {
+  text-align: center;
+  margin-top: var(--lx-space-xl);
+}
+
+.luxellia-btn-all-products {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--lx-space-xs);
+  padding: 12px 28px;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   13. Quick View Modal & Mobile Filter Drawer
+   ========================================================================== */
+
+/* Modal Backdrop & Container */
+.luxellia-modal-wrap,
+.luxellia-filter-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.luxellia-modal-wrap[hidden],
+.luxellia-filter-drawer[hidden] {
+  display: none !important;
+}
+
+.luxellia-modal-backdrop,
+.luxellia-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(16, 40, 62, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.luxellia-modal-container {
+  position: relative;
+  background-color: var(--lx-white);
+  border-radius: var(--lx-radius-md);
+  box-shadow: 0 24px 48px rgba(23, 50, 77, 0.2);
+  width: 90%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1110;
+  padding: var(--lx-space-xl);
+}
+
+.luxellia-modal-close-btn,
+.luxellia-drawer-close-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--lx-navy);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  z-index: 1120;
+}
+
+.luxellia-quickview-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--lx-space-xl);
+  align-items: center;
+}
+
+.luxellia-quickview-media {
+  background-color: var(--lx-ivory);
+  border-radius: var(--lx-radius-sm);
+  padding: var(--lx-space-lg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.luxellia-quickview-img {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+.luxellia-quickview-brand {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--lx-silver);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.luxellia-quickview-title {
+  font-family: var(--lx-font-serif);
+  font-size: 1.65rem;
+  color: var(--lx-navy);
+  margin-block: 4px;
+}
+
+.luxellia-quickview-spec {
+  font-size: 0.85rem;
+  color: var(--lx-muted);
+  margin-bottom: var(--lx-space-xs);
+}
+
+.luxellia-quickview-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--lx-space-sm);
+}
+
+.luxellia-reviews-count {
+  font-size: 0.75rem;
+  color: var(--lx-muted);
+}
+
+.luxellia-quickview-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: var(--lx-space-sm);
+  margin-bottom: var(--lx-space-sm);
+}
+
+.luxellia-quickview-desc {
+  font-size: 0.875rem;
+  color: var(--lx-text);
+  line-height: 1.6;
+  margin-bottom: var(--lx-space-sm);
+}
+
+.luxellia-quickview-notes-box {
+  background-color: var(--lx-ivory);
+  border: 1px solid var(--lx-silver-soft);
+  border-radius: var(--lx-radius-sm);
+  padding: 10px 12px;
+  margin-bottom: var(--lx-space-md);
+}
+
+.luxellia-notes-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+  display: block;
+}
+
+.luxellia-notes-text {
+  font-size: 0.8rem;
+  color: var(--lx-blue);
+  margin: 2px 0 0 0;
+}
+
+/* Mobile Filter Drawer Panel */
+.luxellia-drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 85%;
+  max-width: 360px;
+  background-color: var(--lx-white);
+  box-shadow: -8px 0 24px rgba(23, 50, 77, 0.15);
+  z-index: 1110;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.luxellia-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--lx-space-md);
+  border-bottom: 1px solid var(--lx-border);
+}
+
+.luxellia-drawer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--lx-navy);
+}
+
+.luxellia-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--lx-space-md);
+}
+
+.luxellia-drawer-footer {
+  padding: var(--lx-space-md);
+  border-top: 1px solid var(--lx-border);
+  display: flex;
+  gap: var(--lx-space-sm);
+}
+
+/* ==========================================================================
+   14. Responsive Breakpoints
+   ========================================================================== */
+
+/* Extra Small Screens: < 360px (single column to prevent text clipping) */
+@media (max-width: 359px) {
+  .luxellia-catalog-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .luxellia-modal-container {
+    padding: var(--lx-space-md);
+  }
+}
+
+/* Mobile Screens: < 768px */
+@media (max-width: 767px) {
+  .luxellia-catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--lx-space-sm);
+  }
+
+  .luxellia-quickview-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .luxellia-quickview-pricing,
+  .luxellia-quickview-rating {
+    justify-content: center;
+  }
+}
+
+/* Mobile Menu & Drawer Threshold: < 900px / < 992px */
+@media (max-width: 991px) {
+  .luxellia-catalog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .luxellia-catalog-sidebar {
+    display: none;
+  }
+
+  .luxellia-mobile-filter-trigger {
+    display: inline-flex;
+  }
+}
+
 @media (max-width: 900px) {
   .luxellia-nav {
     display: none;
@@ -1332,6 +2124,10 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .luxellia-catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .luxellia-auth-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1366,6 +2162,14 @@ button {
 
   .luxellia-section {
     padding-block: var(--lx-space-3xl);
+  }
+}
+
+/* Desktop Wide: >= 1200px (4 columns for products catalog) */
+@media (min-width: 1200px) {
+  .luxellia-catalog-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--lx-space-lg);
   }
 }
 

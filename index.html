@@ -6,7 +6,7 @@
   <meta name="description" content="متجر Luxellia Parfums - واجهة تجريبية فاخرة لتخصيص ثيم رائد على منصة سلة">
   <meta name="robots" content="noindex,nofollow">
   <title>Luxellia Parfums | فخامة العطور العالمية (معاينة تجريبية)</title>
-  <link rel="stylesheet" href="styles.css?v=1.2.1">
+  <link rel="stylesheet" href="styles.css?v=1.3.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
 
       <!-- Logo -->
       <div class="luxellia-brand">
-        <a href="#" class="luxellia-brand-link" aria-label="Luxellia Parfums الرئيسية">
+        <a href="index.html" class="luxellia-brand-link" aria-label="Luxellia Parfums الرئيسية">
           <img src="assets/logo.svg" alt="Luxellia Parfums" class="luxellia-logo" width="180" height="42">
         </a>
       </div>
@@ -51,14 +51,15 @@
       <!-- Desktop Navigation -->
       <nav class="luxellia-nav" id="mainNav" aria-label="التنقل الرئيسي">
         <ul class="luxellia-nav-list">
-          <li class="luxellia-nav-item"><a href="#" class="luxellia-nav-link active">الرئيسية</a></li>
-          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عطور رجالية</a></li>
-          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عطور نسائية</a></li>
-          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عطور نيش</a></li>
-          <li class="luxellia-nav-item"><a href="#categories" class="luxellia-nav-link">عينات العطور</a></li>
+          <li class="luxellia-nav-item"><a href="index.html" class="luxellia-nav-link active">الرئيسية</a></li>
+          <li class="luxellia-nav-item"><a href="products.html" class="luxellia-nav-link">كافة العطور</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=men" class="luxellia-nav-link">عطور رجالية</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=women" class="luxellia-nav-link">عطور نسائية</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=niche" class="luxellia-nav-link">عطور نيش</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?category=samples" class="luxellia-nav-link">عينات العطور</a></li>
           <li class="luxellia-nav-item"><a href="#brands" class="luxellia-nav-link">الماركات</a></li>
-          <li class="luxellia-nav-item"><a href="#offers" class="luxellia-nav-link">العروض الحصرية</a></li>
-          <li class="luxellia-nav-item"><a href="#authenticity" class="luxellia-nav-link">الأصالة والجودة</a></li>
+          <li class="luxellia-nav-item"><a href="products.html?offers=true" class="luxellia-nav-link">العروض الحصرية</a></li>
+          <li class="luxellia-nav-item"><a href="#authenticity" class="luxellia-nav-link">معايير الجودة</a></li>
         </ul>
       </nav>
 
@@ -104,7 +105,7 @@
             مجموعة منتقاة بعناية من أرقى دور العطور العالمية والنيش، تجربة تسوق راقية تحتفي بأناقة الحضور والتميز العطري.
           </p>
           <div class="luxellia-hero-actions">
-            <a href="#categories" class="luxellia-btn luxellia-btn-primary">اكتشفي المجموعة</a>
+            <a href="products.html" class="luxellia-btn luxellia-btn-primary">اكتشفي المجموعة</a>
             <a href="#authenticity" class="luxellia-btn luxellia-btn-secondary">معايير الجودة</a>
           </div>
         </div>
@@ -307,7 +308,7 @@
         <div class="luxellia-categories-grid">
           <!-- Category 1 -->
           <article class="luxellia-cat-card">
-            <a href="#catalog" class="luxellia-cat-link">
+            <a href="products.html?category=men" class="luxellia-cat-link">
               <div class="luxellia-cat-media">
                 <img src="assets/cat-men.svg" alt="عطور رجالية فاخرة" class="luxellia-cat-img" loading="lazy" width="300" height="375">
               </div>
@@ -321,7 +322,7 @@
 
           <!-- Category 2 -->
           <article class="luxellia-cat-card">
-            <a href="#catalog" class="luxellia-cat-link">
+            <a href="products.html?category=women" class="luxellia-cat-link">
               <div class="luxellia-cat-media">
                 <img src="assets/cat-women.svg" alt="عطور نسائية راقية" class="luxellia-cat-img" loading="lazy" width="300" height="375">
               </div>
@@ -335,7 +336,7 @@
 
           <!-- Category 3 -->
           <article class="luxellia-cat-card">
-            <a href="#catalog" class="luxellia-cat-link">
+            <a href="products.html?category=niche" class="luxellia-cat-link">
               <div class="luxellia-cat-media">
                 <img src="assets/cat-niche.svg" alt="عطور نيش حصرية" class="luxellia-cat-img" loading="lazy" width="300" height="375">
               </div>
@@ -349,7 +350,7 @@
 
           <!-- Category 4 -->
           <article class="luxellia-cat-card">
-            <a href="#catalog" class="luxellia-cat-link">
+            <a href="products.html?category=samples" class="luxellia-cat-link">
               <div class="luxellia-cat-media">
                 <img src="assets/cat-samples.svg" alt="عينات العطور ومجموعات الاكتشاف" class="luxellia-cat-img" loading="lazy" width="300" height="375">
               </div>
@@ -565,6 +566,12 @@
             </div>
           </article>
         </div>
+
+        <div class="luxellia-catalog-cta-wrap">
+          <a href="products.html" class="luxellia-btn luxellia-btn-secondary luxellia-btn-all-products">
+            عرض كافة العطور والمختارات (12 منتجاً) &larr;
+          </a>
+        </div>
       </div>
     </section>
 
@@ -579,9 +586,9 @@
                 <path d="m9 12 2 2 4-4"></path>
               </svg>
             </div>
-            <h3 class="luxellia-auth-heading">معايير التحقق وسلاسل الإمداد</h3>
+            <h3 class="luxellia-auth-heading">سياسة التحقق المقترحة من المنتجات</h3>
             <p class="luxellia-auth-text">
-              نلتزم في Luxellia Parfums بالاستيراد الحصري عبر وكلاء وموزعين معتمدين. تخضع كل شحنة للتحقق الدقيق من الباركود والتشغيلة وتطابق بيانات بلد المنشأ قبل عرضها في المتجر.
+              تستهدف سياسة تشغيل Luxellia Parfums اعتماد الفحص المنتظم لبيانات التشغيلة والمصدر والتأكد من توافق العطور مع المعايير والمواصفات الرسمية لضمان تجربة عطرية موثوقة.
             </p>
           </div>
 
@@ -593,9 +600,9 @@
                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
               </svg>
             </div>
-            <h3 class="luxellia-auth-heading">عبوات أصلية وتخزين مهني</h3>
+            <h3 class="luxellia-auth-heading">معايير التغليف والحفظ المقترحة</h3>
             <p class="luxellia-auth-text">
-              تصل المنتجات في علب المصنع المغلقة بغلاف السيلوفان الأصلي، وتُحفظ في مستودعات مهيأة بدرجات حرارة ورطوبة مضبوطة للحفاظ على توازن وثبات النوتات العطرية الحساسة.
+              تعتمد خطتنا التشغيلية على حماية التغليف الأصلي لكل منتج وتوفير ظروف حفظ ملائمة ومحمية من الضوء والحرارة للحفاظ على توازن وثبات المكونات العطرية الحساسة.
             </p>
           </div>
 
@@ -606,9 +613,9 @@
                 <polyline points="12 6 12 12 14 14"></polyline>
               </svg>
             </div>
-            <h3 class="luxellia-auth-heading">سياسة قبول حازمة للمنتجات</h3>
+            <h3 class="luxellia-auth-heading">معايير حازمة لجودة الكتالوج</h3>
             <p class="luxellia-auth-text">
-              لا ندرج العطور المستوحاة أو التركيبات أو الزيوت غير الموثقة؛ معيارنا الصارم هو قبول الماركات العالمية المعترف بها رسمياً وخضوعها لرقابة الجودة التامة.
+              يقوم نموذج متجر Luxellia على إدراج العطور الأصلية وعطور النيش فقط، واستبعاد التركيبات غير الموثقة للحفاظ على أعلى درجات الشفافية ورضا العملاء.
             </p>
           </div>
         </div>
@@ -683,11 +690,10 @@
       <div class="luxellia-footer-col luxellia-footer-brand-col">
         <img src="assets/logo.svg" alt="Luxellia Parfums" class="luxellia-footer-logo" width="160" height="38">
         <p class="luxellia-footer-bio">
-          متجر سعودي متخصص في توفير العطور العالمية الأصلية وعطور النيش الفاخرة، موثق بسجل تجاري رسمي ومعتمد لتقديم تجربة تسوق استثنائية.
+          متجر متخصص في توفير العطور العالمية الأصلية وعطور النيش الفاخرة، يهدف لتقديم تجربة تسوق راقية وخدمة عملاء استثنائية.
         </p>
         <div class="luxellia-footer-tax">
-          <span>الرقم الضريبي: 300000000000003</span>
-          <span>معروف: متجر موثق</span>
+          <span>بيانات التوثيق: تضاف بعد اعتماد بيانات المتجر الرسمية</span>
         </div>
       </div>
 
@@ -695,12 +701,12 @@
       <div class="luxellia-footer-col">
         <h4 class="luxellia-footer-heading">أقسام المتجر</h4>
         <ul class="luxellia-footer-links">
-          <li><a href="#categories">عطور رجالية</a></li>
-          <li><a href="#categories">عطور نسائية</a></li>
-          <li><a href="#categories">عطور نيش</a></li>
-          <li><a href="#categories">عينات العطور</a></li>
+          <li><a href="products.html?category=men">عطور رجالية</a></li>
+          <li><a href="products.html?category=women">عطور نسائية</a></li>
+          <li><a href="products.html?category=niche">عطور نيش</a></li>
+          <li><a href="products.html?category=samples">عينات العطور</a></li>
           <li><a href="#brands">الماركات العالمية</a></li>
-          <li><a href="#offers">العروض الحصرية</a></li>
+          <li><a href="products.html?offers=true">العروض الحصرية</a></li>
         </ul>
       </div>
 
@@ -719,14 +725,14 @@
       <!-- Col 4: Contact & Socials -->
       <div class="luxellia-footer-col">
         <h4 class="luxellia-footer-heading">تواصل معنا</h4>
-        <p class="luxellia-footer-contact-item">واتساب: +966 50 000 0000</p>
-        <p class="luxellia-footer-contact-item">البريد: care@luxellia-parfums.com</p>
-        <p class="luxellia-footer-contact-item">أوقات العمل: 9 ص – 10 م</p>
+        <p class="luxellia-footer-contact-item">واتساب: يضاف بعد اعتماد بيانات التواصل الرسمية</p>
+        <p class="luxellia-footer-contact-item">البريد: care@luxellia-parfums.com (تجريبي)</p>
+        <p class="luxellia-footer-contact-item">أوقات العمل: خدمة عملاء على مدار الساعة</p>
         <div class="luxellia-social-links" aria-label="حسابات التواصل الاجتماعي">
-          <a href="#" class="luxellia-social-icon" aria-label="Instagram">IG</a>
-          <a href="#" class="luxellia-social-icon" aria-label="Twitter / X">X</a>
-          <a href="#" class="luxellia-social-icon" aria-label="TikTok">TT</a>
-          <a href="#" class="luxellia-social-icon" aria-label="Snapchat">SC</a>
+          <a href="#support" class="luxellia-social-icon" aria-label="Instagram">IG</a>
+          <a href="#support" class="luxellia-social-icon" aria-label="Twitter / X">X</a>
+          <a href="#support" class="luxellia-social-icon" aria-label="TikTok">TT</a>
+          <a href="#support" class="luxellia-social-icon" aria-label="Snapchat">SC</a>
         </div>
       </div>
     </div>
@@ -750,6 +756,6 @@
   <!-- Toast Notification Container for Mock Actions -->
   <div id="luxelliaToast" class="luxellia-toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
-  <script src="preview.js?v=1.2.1"></script>
+  <script src="preview.js?v=1.3.0"></script>
 </body>
 </html>
