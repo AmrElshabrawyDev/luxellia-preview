@@ -1,6 +1,6 @@
 /**
  * Luxellia Parfums — Products Catalog Page Controller
- * Version: 1.3.1
+ * Version: 1.4.0
  * Features:
  * - 12 Curated Mock Perfume Products (mock: true)
  * - Real client-side search, filtering, and sorting (AND logic)
@@ -543,13 +543,39 @@
     img.height = 280;
     media.appendChild(img);
 
-    // Quick View Overlay Button
+    // Quick View Circular Icon Button (Top-left inside media)
     const quickViewBtn = document.createElement('button');
     quickViewBtn.type = 'button';
     quickViewBtn.className = 'luxellia-card-quickview-btn';
     quickViewBtn.setAttribute('data-quickview-id', prod.id);
-    quickViewBtn.setAttribute('aria-label', 'معاينة سريعة لعطر ' + prod.nameAr);
-    quickViewBtn.textContent = 'معاينة سريعة';
+    quickViewBtn.setAttribute('aria-label', 'معاينة سريعة: ' + prod.nameAr);
+    quickViewBtn.setAttribute('title', 'معاينة سريعة');
+
+    // Safe SVG Eye Icon (Zero innerHTML)
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const eyeSvg = document.createElementNS(svgNS, 'svg');
+    eyeSvg.setAttribute('viewBox', '0 0 24 24');
+    eyeSvg.setAttribute('width', '20');
+    eyeSvg.setAttribute('height', '20');
+    eyeSvg.setAttribute('fill', 'none');
+    eyeSvg.setAttribute('stroke', 'currentColor');
+    eyeSvg.setAttribute('stroke-width', '2');
+    eyeSvg.setAttribute('stroke-linecap', 'round');
+    eyeSvg.setAttribute('stroke-linejoin', 'round');
+    eyeSvg.setAttribute('aria-hidden', 'true');
+    eyeSvg.setAttribute('class', 'luxellia-quickview-icon');
+
+    const eyePath = document.createElementNS(svgNS, 'path');
+    eyePath.setAttribute('d', 'M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z');
+    eyeSvg.appendChild(eyePath);
+
+    const eyeCircle = document.createElementNS(svgNS, 'circle');
+    eyeCircle.setAttribute('cx', '12');
+    eyeCircle.setAttribute('cy', '12');
+    eyeCircle.setAttribute('r', '3');
+    eyeSvg.appendChild(eyeCircle);
+
+    quickViewBtn.appendChild(eyeSvg);
     media.appendChild(quickViewBtn);
 
     card.appendChild(media);
