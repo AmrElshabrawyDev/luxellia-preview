@@ -6,7 +6,7 @@
   <meta name="description" content="متجر Luxellia Parfums - نموذج بصري تفاعلي لصفحة تصنيف المنتجات يحاكي المظهر المتوقع في ثيم رائد على منصة سلة">
   <meta name="robots" content="noindex,nofollow">
   <title>كافة العطور الفاخرة | Luxellia Parfums (معاينة تجريبية)</title>
-  <link rel="stylesheet" href="styles.css?v=1.3.0">
+  <link rel="stylesheet" href="styles.css?v=1.3.1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,15 +17,15 @@
     <div class="luxellia-container luxellia-mock-banner-inner">
       <span class="luxellia-mock-tag">تنبيه المعاينة</span>
       <span class="luxellia-unpublished-tag">نسخة تجريبية غير منشورة</span>
-      <span>نموذج بصري تفاعلي لصفحة تصنيف المنتجات في ثيم رائد — البيانات والصور تجريبية بالكامل</span>
-      <span class="luxellia-mock-note">(Mock Preview Environment)</span>
+      <span>نموذج بصري تفاعلي لصفحة تصنيف المنتجات في ثيم رائد — كافة الأسعار والخصومات والتقييمات المعروضة بيانات تجريبية وليست عروضاً فعلية</span>
+      <span class="luxellia-mock-note">المنتجات والصور نماذج للعرض فقط</span>
     </div>
   </div>
 
   <!-- Announcement Bar -->
   <div class="luxellia-top-bar">
     <div class="luxellia-container luxellia-top-bar-inner">
-      <p class="luxellia-top-bar-text">شحن مجاني للطلبات فوق 350 ر.س في كافة مدن المملكة | تجربة عطرية فاخرة</p>
+      <p class="luxellia-top-bar-text">سياسة الشحن تُحدد بعد اعتماد إعدادات المتجر | تجربة عطرية فاخرة (معاينة تجريبية)</p>
       <div class="luxellia-top-bar-links">
         <a href="index.html#about" class="luxellia-link-subtle">من نحن</a>
         <a href="index.html#authenticity" class="luxellia-link-subtle">معايير الجودة</a>
@@ -73,13 +73,13 @@
           </svg>
         </button>
 
-        <!-- Account -->
-        <a href="#account" class="luxellia-action-btn" aria-label="تسجيل الدخول / الحساب التجريبي">
+        <!-- Account (Disabled in preview) -->
+        <button type="button" class="luxellia-action-btn" disabled aria-label="تسجيل الدخول / الحساب (غير متاح في المعاينة التجريبية)" title="تسجيل الدخول / الحساب (غير متاح في المعاينة التجريبية)">
           <svg class="luxellia-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
-        </a>
+        </button>
 
         <!-- Cart Badge -->
         <button class="luxellia-action-btn luxellia-cart-btn" id="cartBtn" aria-label="سلة المشتريات التجريبية: 0 منتجات">
@@ -115,10 +115,10 @@
       <div class="luxellia-container">
         <div class="luxellia-catalog-banner">
           <div class="luxellia-catalog-banner-text">
-            <span class="luxellia-catalog-badge">مجموعة Luxellia المعتمدة</span>
+            <span class="luxellia-catalog-badge">مجموعة Luxellia التجريبية</span>
             <h1 class="luxellia-catalog-title" id="catalogTitle">كافة العطور الفاخرة</h1>
             <p class="luxellia-catalog-desc" id="catalogDescription">
-              تشكيلة حصرية من أرقى العطور العالمية وعطور النيش الأصلية، منتقاة بعناية لترضي الذائقة الرفيعة وفق أعلى معايير الجودة.
+              تشكيلة تجريبية من العطور العالمية وعطور النيش للعرض والمعاينة، مع محاكاة كاملة لتجربة التصفح والشراء في ثيم رائد.
             </p>
           </div>
 
@@ -478,7 +478,7 @@
           <img src="assets/logo.svg" alt="Luxellia Parfums" class="luxellia-footer-logo" width="160" height="38">
         </a>
         <p class="luxellia-footer-bio">
-          متجر متخصص في توفير العطور العالمية الأصلية وعطور النيش الفاخرة، يهدف لتقديم تجربة تسوق راقية وخدمة عملاء استثنائية.
+          نموذج تجريبي لمتجر عطور فاخرة وعطور نيش، يهدف لمحاكاة تجربة التسوق في ثيم رائد وفق متطلبات الإطلاق القادم.
         </p>
         <div class="luxellia-footer-tax">
           <span>بيانات التوثيق: تضاف بعد اعتماد بيانات المتجر الرسمية</span>
@@ -502,11 +502,11 @@
       <div class="luxellia-footer-col">
         <h4 class="luxellia-footer-heading">خدمة العملاء</h4>
         <ul class="luxellia-footer-links">
-          <li><a href="index.html#policy-return">سياسة الاستبدال والاسترجاع</a></li>
-          <li><a href="index.html#policy-shipping">الشحن والتوصيل</a></li>
-          <li><a href="index.html#policy-privacy">سياسة الخصوصية</a></li>
-          <li><a href="index.html#policy-terms">الشروط والأحكام</a></li>
-          <li><a href="index.html#contact">اتصل بنا</a></li>
+          <li><span class="luxellia-footer-text-item">سياسة الاستبدال والاسترجاع (قيد الإعداد)</span></li>
+          <li><span class="luxellia-footer-text-item">الشحن والتوصيل (قيد الإعداد)</span></li>
+          <li><span class="luxellia-footer-text-item">سياسة الخصوصية (قيد الإعداد)</span></li>
+          <li><span class="luxellia-footer-text-item">الشروط والأحكام (قيد الإعداد)</span></li>
+          <li><span class="luxellia-footer-text-item">اتصل بنا (قيد الإعداد)</span></li>
         </ul>
       </div>
 
@@ -516,11 +516,11 @@
         <p class="luxellia-footer-contact-item">واتساب: يضاف بعد اعتماد بيانات التواصل الرسمية</p>
         <p class="luxellia-footer-contact-item">البريد: care@luxellia-parfums.com (تجريبي)</p>
         <p class="luxellia-footer-contact-item">أوقات العمل: خدمة عملاء على مدار الساعة</p>
-        <div class="luxellia-social-links" aria-label="حسابات التواصل الاجتماعي">
-          <a href="#support" class="luxellia-social-icon" aria-label="Instagram">IG</a>
-          <a href="#support" class="luxellia-social-icon" aria-label="Twitter / X">X</a>
-          <a href="#support" class="luxellia-social-icon" aria-label="TikTok">TT</a>
-          <a href="#support" class="luxellia-social-icon" aria-label="Snapchat">SC</a>
+        <div class="luxellia-social-links" aria-label="حسابات التواصل الاجتماعي (قيد الإعداد)">
+          <span class="luxellia-social-icon is-disabled" title="Instagram (قيد الإعداد)" aria-label="Instagram (قيد الإعداد)">IG</span>
+          <span class="luxellia-social-icon is-disabled" title="Twitter / X (قيد الإعداد)" aria-label="Twitter / X (قيد الإعداد)">X</span>
+          <span class="luxellia-social-icon is-disabled" title="TikTok (قيد الإعداد)" aria-label="TikTok (قيد الإعداد)">TT</span>
+          <span class="luxellia-social-icon is-disabled" title="Snapchat (قيد الإعداد)" aria-label="Snapchat (قيد الإعداد)">SC</span>
         </div>
       </div>
     </div>
@@ -545,7 +545,7 @@
   <div id="luxelliaToast" class="luxellia-toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <!-- Core Preview Script & Products Controller -->
-  <script src="preview.js?v=1.3.0"></script>
-  <script src="products.js?v=1.3.0"></script>
+  <script src="preview.js?v=1.3.1"></script>
+  <script src="products.js?v=1.3.1"></script>
 </body>
 </html>

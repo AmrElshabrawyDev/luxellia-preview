@@ -370,6 +370,19 @@ button {
   color: var(--lx-blue);
 }
 
+.luxellia-action-btn:disabled,
+.luxellia-action-btn.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.luxellia-action-btn:disabled:hover,
+.luxellia-action-btn.is-disabled:hover {
+  background-color: transparent;
+  color: var(--lx-navy);
+}
+
 .luxellia-icon {
   width: 20px;
   height: 20px;
@@ -1183,6 +1196,12 @@ button {
   color: var(--lx-white);
 }
 
+.luxellia-footer-text-item {
+  color: var(--lx-silver);
+  font-size: 0.85rem;
+  display: block;
+}
+
 .luxellia-footer-contact-item {
   margin-bottom: var(--lx-space-xs);
   color: #a2afbd;
@@ -1210,6 +1229,16 @@ button {
 
 .luxellia-social-icon:hover {
   background-color: var(--lx-blue);
+}
+
+.luxellia-social-icon.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.luxellia-social-icon.is-disabled:hover {
+  background-color: #17324d;
 }
 
 .luxellia-footer-bottom {
