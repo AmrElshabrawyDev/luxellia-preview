@@ -1,6 +1,6 @@
 /**
  * Luxellia Parfums — Unified Storefront Interactions
- * Version: 1.4.0
+ * Version: 1.4.1
  * Purpose: Safe client-side UI interactions, mobile navigation, and mock preview cart.
  * Strict Constraint: Uses isolated localStorage key 'luxellia_preview_cart_v1'. Zero customer data.
  */

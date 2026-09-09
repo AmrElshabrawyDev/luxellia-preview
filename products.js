@@ -1,6 +1,6 @@
 /**
  * Luxellia Parfums — Products Catalog Page Controller
- * Version: 1.4.0
+ * Version: 1.4.1
  * Features:
  * - 12 Curated Mock Perfume Products (mock: true)
  * - Real client-side search, filtering, and sorting (AND logic)

@@ -20,6 +20,12 @@
   --lx-success: #206a4a;
   --lx-danger: #a33a3a;
 
+  /* Burgundy accent requested by the client — supporting accent, not a primary brand replacement */
+  --lx-burgundy: #6b1f3a;
+  --lx-burgundy-deep: #4f142a;
+  --lx-burgundy-soft: #f5eaee;
+  --lx-burgundy-rgb: 107, 31, 58;
+
   /* Temporary Brand Blue Token (Pending client vector logo) */
   --lx-temp-brand-blue: #17324d;
 
@@ -2241,6 +2247,78 @@ button {
   border-top: 1px solid var(--lx-border);
   display: flex;
   gap: var(--lx-space-sm);
+}
+
+
+/* ==========================================================================
+   13b. Client-approved Burgundy Accent Layer (v1.4.1)
+   Burgundy is intentionally limited to focal details; navy stays primary.
+   ========================================================================== */
+.luxellia-divider {
+  width: 64px;
+  opacity: 1;
+  background: linear-gradient(90deg, var(--lx-silver) 0 24%, var(--lx-burgundy) 24% 76%, var(--lx-silver) 76% 100%);
+}
+
+.luxellia-section-subtitle,
+.luxellia-offer-tag,
+.luxellia-welcome-accent,
+.luxellia-cat-cta,
+.luxellia-nav-link.active {
+  color: var(--lx-burgundy);
+}
+
+.luxellia-nav-link.active::after {
+  background-color: var(--lx-burgundy);
+}
+
+.luxellia-hero-tag {
+  color: var(--lx-white);
+  background: rgba(var(--lx-burgundy-rgb), 0.46);
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 7px 22px rgba(var(--lx-burgundy-rgb), 0.24);
+}
+
+.luxellia-hero-actions .luxellia-btn-primary {
+  background-color: var(--lx-burgundy);
+  border-color: var(--lx-burgundy);
+  box-shadow: 0 8px 24px rgba(var(--lx-burgundy-rgb), 0.28);
+}
+
+.luxellia-hero-actions .luxellia-btn-primary:hover {
+  background-color: var(--lx-burgundy-deep);
+  border-color: var(--lx-burgundy-deep);
+}
+
+.luxellia-offer-badge {
+  background: linear-gradient(135deg, var(--lx-burgundy-deep), var(--lx-burgundy));
+  box-shadow: 0 4px 14px rgba(var(--lx-burgundy-rgb), 0.25);
+}
+
+.luxellia-offer-price-current {
+  color: var(--lx-burgundy-deep);
+}
+
+.luxellia-cat-card:hover {
+  border-color: rgba(var(--lx-burgundy-rgb), 0.48);
+  box-shadow: 0 12px 30px rgba(var(--lx-burgundy-rgb), 0.12);
+}
+
+.luxellia-pill-btn.active {
+  background-color: var(--lx-burgundy);
+  border-color: var(--lx-burgundy);
+  box-shadow: 0 4px 14px rgba(var(--lx-burgundy-rgb), 0.34);
+}
+
+.luxellia-card-quickview-btn:hover,
+.luxellia-card-quickview-btn:focus-visible {
+  background-color: var(--lx-burgundy);
+  border-color: var(--lx-burgundy);
+  color: var(--lx-white);
+}
+
+.luxellia-feature-item:nth-child(2) .luxellia-feature-icon {
+  color: var(--lx-burgundy);
 }
 
 /* ==========================================================================
